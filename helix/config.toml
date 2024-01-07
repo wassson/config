@@ -1,5 +1,9 @@
 theme = "wasson"
 
+[editor.lsp]
+enable = true
+auto-signature-help = true
+
 [keys.normal]
 "C-k" = ["goto_line_end","extend_line_below", "delete_selection", "move_line_up", "paste_before"]
 "C-j" = ["goto_line_end","extend_line_below", "delete_selection", "paste_after"]
