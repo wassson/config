@@ -1,0 +1,45 @@
+"ui.background" = { bg = "darkPurple" }
+"ui.selection" = { bg = "lavender", fg = "darkPurple" }
+"ui.text" = "white"
+"ui.linenr" = { fg = "lavender" }
+"ui.linenr.selected" = { bg = "lavender", fg = "darkPurple" }
+"ui.statusline" = { fg = "lavender" }
+"ui.cursor.select" = { bg = "lavender" }
+"ui.cursorline.primary" = { bg = "lavender" }
+
+"diagnostic.hint" = { underline = { color = "silver", style = "curl" } }
+"diagnostic.info" = { underline = { color = "delta", style = "curl" } }
+"diagnostic.warning" = { underline = { color = "lightning", style = "curl" } }
+"diagnostic.error" = { underline = { color = "apricot", style = "curl" } }
+
+warning = "lightning"
+error = "apricot"
+info = "delta"
+hint = "silver"
+
+attribute = "lavender"
+comment = "darkGray"
+constant = "yellow"
+constructor = "#FF7D00"
+function = "lavender"
+keyword = "grayBlue"
+namespace = "yellow"
+operator = "yellow"
+punctuation = "yellow"
+string = "#E9E6FF"
+"string.special.symbol" = "#7BA098"
+variable = "#F28482"
+
+
+[palette]
+darkGray = "#343847"
+darkPurple = "#0f0d14"
+grayBlue = "#444759"
+darkGrayBlue = "#313352"
+lavender = "#a4a0e8"
+orange = "#ffa012"
+
+apricot = "#f47868"
+lightning = "#ffcd1c"
+delta = "#6F44F0"
+silver = "#cccccc"
