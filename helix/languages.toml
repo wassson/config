@@ -1,0 +1,13 @@
+# -- ruby --
+# -- Solargraph --
+[language-server.solargraph]
+name = "solargraph"
+command = "solargraph"
+
+[[language]]
+name = "ruby"
+injection-regex = "ruby"
+file-types = ["rb", "erb", "Gemfile", "Rakefile", "Procfile"]
+comment-token = "#"
+indent = { tab-width = 2, unit = "  " }
+language-servers = ["solargraph"]
