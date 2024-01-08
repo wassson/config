@@ -27,7 +27,7 @@ namespace = "yellow"
 operator = "yellow"
 punctuation = "yellow"
 string = "#E9E6FF"
-"string.special.symbol" = "#7BA098"
+"string.special.symbol" = "#62b7e1"
 variable = "#F28482"
 
 
