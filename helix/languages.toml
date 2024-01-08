@@ -15,6 +15,7 @@ hover = true
 name = "ruby"
 auto-format = true
 file-types = ["rb", "erb", "Gemfile", "Rakefile", "Procfile"]
+shebangs = ["ruby"]
 comment-token = "#"
 indent = { tab-width = 2, unit = "  " }
 language-servers = [{ name = "solargraph" }]
