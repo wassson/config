@@ -34,7 +34,6 @@ return {
     filetypes = { "vim" },
   },
   tsserver = {},
-  gopls = {},
   -- golangci_lint_ls = {},
 
   solidity_ls_nomicfoundation = {},
