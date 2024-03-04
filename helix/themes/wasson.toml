@@ -1,8 +1,9 @@
-"ui.background" = { bg = "darkPurple" }
+"ui.background" = { bg = "lightGray" }
 "ui.selection" = { bg = "lavender", fg = "darkPurple" }
 "ui.text" = "white"
-"ui.linenr" = { fg = "lavender" }
-"ui.linenr.selected" = { bg = "lavender", fg = "darkPurple" }
+"ui.linenr" = { fg = "#454545" }
+"ui.linenr.selected" = { fg = "silver" }
+# "ui.linenr.selected" = { bg = "lavender", fg = "darkPurple" }
 "ui.statusline" = { fg = "lavender" }
 "ui.cursor.select" = { bg = "lavender" }
 "ui.cursorline.primary" = { bg = "lavender" }
@@ -22,7 +23,7 @@ comment = "darkGray"
 constant = "yellow"
 constructor = "#FF7D00"
 function = "lavender"
-keyword = "grayBlue"
+keyword = "lavender"
 namespace = "yellow"
 operator = "yellow"
 punctuation = "yellow"
@@ -37,7 +38,10 @@ darkPurple = "#0f0d14"
 grayBlue = "#444759"
 darkGrayBlue = "#313352"
 lavender = "#a4a0e8"
+lightGray = "#282828"
 orange = "#ffa012"
+
+
 
 apricot = "#f47868"
 lightning = "#ffcd1c"

@@ -1,0 +1,19 @@
+{"signed_in":false,"type":"Setting","setting":"theme","value":"Atelier Cave Dark","milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Setting","setting":"keymap","value":"VSCode","milliseconds_since_first_event":0}
+{"signed_in":false,"type":"App","operation":"open","milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Editor","operation":"open","file_extension":"json","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Editor","operation":"open","file_extension":"erb","vim_mode":false,"copilot_enabled":true,"copilot_enabled_for_language":true,"milliseconds_since_first_event":26744}
+{"signed_in":false,"type":"Memory","memory_in_bytes":330268672,"virtual_memory_in_bytes":430551826432,"milliseconds_since_first_event":239873}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":3.096568,"core_count":8,"milliseconds_since_first_event":239873}
+{"signed_in":false,"type":"Memory","memory_in_bytes":294518784,"virtual_memory_in_bytes":422097338368,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.11162694,"core_count":8,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Memory","memory_in_bytes":228360192,"virtual_memory_in_bytes":422095044608,"milliseconds_since_first_event":240002}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.101108566,"core_count":8,"milliseconds_since_first_event":240002}
+{"signed_in":false,"type":"Memory","memory_in_bytes":199491584,"virtual_memory_in_bytes":422095044608,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.13128833,"core_count":8,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Memory","memory_in_bytes":143671296,"virtual_memory_in_bytes":422095044608,"milliseconds_since_first_event":240041}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.101119466,"core_count":8,"milliseconds_since_first_event":240041}
+{"signed_in":false,"type":"Memory","memory_in_bytes":133513216,"virtual_memory_in_bytes":422094471168,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.10571519,"core_count":8,"milliseconds_since_first_event":0}
+{"signed_in":false,"type":"Memory","memory_in_bytes":94257152,"virtual_memory_in_bytes":422097338368,"milliseconds_since_first_event":240002}
+{"signed_in":false,"type":"Cpu","usage_as_percentage":0.09384089,"core_count":8,"milliseconds_since_first_event":240002}
