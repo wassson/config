@@ -34,6 +34,14 @@ return {
                         dismiss = "<C-e>",
                     },
                 },
+                filetypes = {
+                    css = true,
+                    html = false,
+                    javascript = true,
+                    ruby = true,
+                    typescript = true,
+                    yaml = true,
+                }
             })
         end,
     },
