@@ -40,20 +40,24 @@ return {
           },
           mocha = {
             rosewater = "#ea6962",
-            flamingo = "#ea6962",
+            --flamingo = "#ea6962",
+            -- keywords like :symbol
+            flamingo = "#8fa5ae",
             red = "#ea6962",
+            orange = "#F9CF95",
             maroon = "#ea6962",
             pink = "#d3869b",
             mauve = "#d3869b",
-            peach = "#e78a4e",
+            peach = "#C59172",
             yellow = "#d8a657",
             green = "#a9b665",
             teal = "#89b482",
             sky = "#89b482",
             sapphire = "#89b482",
             blue = "#7daea3",
+            grayBlue = "#8FA5AE",
             lavender = "#7daea3",
-            text = "#ebdbb2",
+            text = "#f3f3f3",
             subtext1 = "#d5c4a1",
             subtext0 = "#bdae93",
             overlay2 = "#a89984",
@@ -75,7 +79,7 @@ return {
           cmp = true,
           gitsigns = true,
           hop = true,
-          illuminate = { enabled = true },
+          illuminate = true,
           native_lsp = { enabled = true, inlay_hints = { background = true } },
           neogit = true,
           neotree = true,
@@ -100,7 +104,7 @@ return {
               CmpItemMenu = { fg = colors.surface2 },
               CursorLineNr = { fg = colors.text },
               FloatBorder = { bg = colors.base, fg = colors.surface0 },
-              GitSignsChange = { fg = colors.peach },
+              GitSignsChange = { fg = colors.peach }, 
               LineNr = { fg = colors.overlay0 },
               LspInfoBorder = { link = "FloatBorder" },
               NeoTreeDirectoryIcon = { fg = colors.subtext1 },
@@ -111,7 +115,7 @@ return {
               NeoTreeGitIgnored = { fg = colors.overlay0 },
               NeoTreeGitModified = { fg = colors.peach },
               NeoTreeGitStaged = { fg = colors.green },
-              NeoTreeGitUnstaged = { fg = colors.red },
+              NeoTreeGitUnstaged = { fg = colors.mauve },
               NeoTreeGitUntracked = { fg = colors.green },
               NeoTreeIndent = { fg = colors.surface1 },
               NeoTreeNormal = { bg = colors.mantle },
@@ -167,7 +171,7 @@ return {
               TSAnnotation = { fg = colors.mauve },
               TSAttribute = { fg = colors.mauve },
               TSBoolean = { fg = colors.mauve },
-              TSCharacter = { fg = colors.teal },
+              TSCharacter = { fg = colors.orange },
               TSCharacterSpecial = { link = "SpecialChar" },
               TSComment = { link = "Comment" },
               TSConditional = { fg = colors.red },
@@ -185,19 +189,19 @@ return {
               TSFloat = { fg = colors.mauve },
               TSFuncBuiltin = { fg = colors.green },
               TSFuncMacro = { fg = colors.green },
-              TSFunction = { fg = colors.green },
+              TSFunction = { fg = colors.orange },
               TSFunctionCall = { fg = colors.green },
-              TSInclude = { fg = colors.red },
-              TSKeyword = { fg = colors.red },
-              TSKeywordFunction = { fg = colors.red },
+              TSInclude = { fg = colors.peach },
+              TSKeyword = { fg = colors.peach },
+              TSKeywordFunction = { fg = colors.peach },
               TSKeywordOperator = { fg = colors.peach },
-              TSKeywordReturn = { fg = colors.red },
+              TSKeywordReturn = { fg = colors.peach },
               TSLabel = { fg = colors.peach },
               TSLiteral = { link = "String" },
               TSMath = { fg = colors.blue },
               TSMethod = { fg = colors.green },
               TSMethodCall = { fg = colors.green },
-              TSNamespace = { fg = colors.yellow },
+              TSNamespace = { fg = colors.orange },
               TSNone = { fg = colors.text },
               TSNumber = { fg = colors.mauve },
               TSOperator = { fg = colors.peach },
@@ -224,7 +228,7 @@ return {
               TSTextReference = { link = "Constant" },
               TSTitle = { link = "Title" },
               TSTodo = { link = "Todo" },
-              TSType = { fg = colors.yellow, style = { "bold" } },
+              TSType = { fg = colors.orange, style = { "bold" } },
               TSTypeBuiltin = { fg = colors.yellow, style = { "bold" } },
               TSTypeDefinition = { fg = colors.yellow, style = { "bold" } },
               TSTypeQualifier = { fg = colors.peach, style = { "bold" } },
@@ -355,78 +359,6 @@ return {
       vim.api.nvim_set_hl(0, "NavicSeparator", { default = true, bg = "none", fg = "#eedaad" })
 
       vim.api.nvim_command("colorscheme catppuccin")
-    end,
-  },
-  {
-    "sainnhe/gruvbox-material",
-    enabled = true,
-    priority = 1000,
-    config = function()
-      vim.g.gruvbox_material_transparent_background = 0
-      vim.g.gruvbox_material_foreground = "mix"
-      vim.g.gruvbox_material_background = "hard"    -- soft, medium, hard
-      vim.g.gruvbox_material_ui_contrast = "high"   -- The contrast of line numbers, indent lines, etc.
-      vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
-      vim.g.gruvbox_material_statusline_style = "material"
-
-      -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
-      -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
-      vim.g.gruvbox_material_better_performance = 1
-
-      -- vim.cmd.colorscheme("gruvbox-material")
-    end,
-  },
-  {
-    "loctvl842/monokai-pro.nvim",
-    config = function()
-      require("monokai-pro").setup({
-        transparent_background = false,
-        terminal_colors = true,
-        devicons = true, -- highlight the icons of `nvim-web-devicons`
-        styles = {
-          comment = { italic = true },
-          keyword = { italic = true },       -- any other keyword
-          type = { italic = true },          -- (preferred) int, long, char, etc
-          storageclass = { italic = true },  -- static, register, volatile, etc
-          structure = { italic = true },     -- struct, union, enum, etc
-          parameter = { italic = true },     -- parameter pass in function
-          annotation = { italic = true },
-          tag_attribute = { italic = true }, -- attribute of tag in reactjs
-        },
-        filter = "octagon",                      -- classic | octagon | pro | machine | ristretto | spectrum
-        -- Enable this will disable filter option
-        day_night = {
-          enable = false,            -- turn off by default
-          day_filter = "octagon",        -- classic | octagon | pro | machine | ristretto | spectrum
-          night_filter = "spectrum", -- classic | octagon | pro | machine | ristretto | spectrum
-        },
-        inc_search = "background",   -- underline | background
-        background_clear = {
-          "float_win",
-          "toggleterm",
-          "telescope",
-          "which-key",
-          "renamer",
-          "notify",
-          -- "nvim-tree",
-          "neo-tree",
-          -- "bufferline", -- better used if background of `neo-tree` or `nvim-tree` is cleared
-        }, -- "float_win", "toggleterm", "telescope", "which-key", "renamer", "neo-tree", "nvim-tree", "bufferline"
-        plugins = {
-          bufferline = {
-            underline_selected = false,
-            underline_visible = false,
-          },
-          indent_blankline = {
-            context_highlight = "default", -- default | pro
-            context_start_underline = false,
-          },
-        },
-        ---@param c Colorscheme
-        override = function(c) end,
-      })
-
-      -- vim.cmd("colorscheme monokai-pro-octagon")
     end,
   },
 }

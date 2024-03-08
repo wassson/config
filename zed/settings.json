@@ -7,10 +7,23 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "theme": "Atelier Cave Dark",
-  "ui_font_size": 16,
-  "buffer_font_size": 16,
+  "project_panel": {
+    "dock": "right"
+  },
+  "theme": "Ayu Dark",
+  "ui_font_size": 14,
+  "ui_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "buffer_font_size": 14,
   "collaboration_panel": {
     "enabled": false
+  },
+  "lsp": {
+    "solargraph": {
+      "initialization_options": {
+        "diagnostics": true,
+        "formatting": true
+      }
+    }
   }
 }
