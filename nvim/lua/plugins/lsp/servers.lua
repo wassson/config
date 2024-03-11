@@ -1,4 +1,12 @@
 return {
+  solargraph = {
+    cmd = { os.getenv('HOME') .. "/.asdf/shims/solargraph", "stdio" },
+    filetypes = { "ruby" },
+  },
+  ruby_ls = {
+    cmd = { "solargraph", "stdio" },
+    filetypes = { "ruby" },
+  },
   jsonls = {
     settings = {
       json = {
