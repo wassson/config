@@ -1,12 +1,10 @@
-"ui.background" = { bg = "lightGray" }
-"ui.selection" = { bg = "lavender", fg = "darkPurple" }
+"ui.background" = { bg = "base" }
+"ui.selection" = { bg = "glow", fg = "base" }
 "ui.text" = "white"
 "ui.linenr" = { fg = "#454545" }
-"ui.linenr.selected" = { fg = "silver" }
-# "ui.linenr.selected" = { bg = "lavender", fg = "darkPurple" }
+"ui.linenr.selected" = { fg = "glow" }
 "ui.statusline" = { fg = "lavender" }
-"ui.cursor.select" = { bg = "lavender" }
-"ui.cursorline.primary" = { bg = "lavender" }
+"ui.cursor.select" = { bg = "glow", fg = "base" }
 
 "diagnostic.hint" = { underline = { color = "silver", style = "curl" } }
 "diagnostic.info" = { underline = { color = "delta", style = "curl" } }
@@ -19,7 +17,7 @@ info = "delta"
 hint = "silver"
 
 attribute = "lavender"
-comment = "darkGray"
+comment = "#676767"
 constant = "yellow"
 constructor = "#FF7D00"
 function = "lavender"
@@ -33,17 +31,11 @@ variable = "#F28482"
 
 
 [palette]
-darkGray = "#343847"
-darkPurple = "#0f0d14"
-grayBlue = "#444759"
-darkGrayBlue = "#313352"
-lavender = "#a4a0e8"
-lightGray = "#282828"
-orange = "#ffa012"
-
-
-
 apricot = "#f47868"
+base = "#1e1f22"
+delta = "#6f44f0"
+glow = "#ece5e1"
+lavender = "#a4a0e8"
 lightning = "#ffcd1c"
-delta = "#6F44F0"
 silver = "#cccccc"
+
