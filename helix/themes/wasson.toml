@@ -3,7 +3,7 @@
 "ui.text" = "white"
 "ui.linenr" = { fg = "#454545" }
 "ui.linenr.selected" = { fg = "glow" }
-"ui.statusline" = { fg = "lavender" }
+"ui.statusline" = { fg = "silver" }
 "ui.cursor.select" = { bg = "glow", fg = "base" }
 
 "diagnostic.hint" = { underline = { color = "silver", style = "curl" } }
@@ -16,18 +16,19 @@ error = "apricot"
 info = "glow"
 hint = "silver"
 
-attribute = "lavender"
+attribute = "orange"
 comment = "#676767"
 constant = "yellow"
-constructor = "#FF7D00"
-function = "lavender"
-keyword = "lavender"
+constructor = "#F6C88F"
+"function.method" = "glow"
+keyword = "peach"
 namespace = "yellow"
 operator = "yellow"
 punctuation = "yellow"
-string = "#E9E6FF"
-"string.special.symbol" = "#62b7e1"
-variable = "#F28482"
+string = "#629E7E"
+"string.special.symbol" = "#AEC9D6"
+"variable.parameter" = "lightning"
+variable = "lavender"
 
 
 [palette]
@@ -37,5 +38,7 @@ delta = "#6f44f0"
 glow = "#ece5e1"
 lavender = "#a4a0e8"
 lightning = "#ffcd1c"
+orange = "#ff7d00"
+peach = "#c59172"
 silver = "#cccccc"
 
