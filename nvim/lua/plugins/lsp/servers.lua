@@ -3,8 +3,8 @@ return {
     cmd = { os.getenv('HOME') .. "/.asdf/shims/solargraph", "stdio" },
     filetypes = { "ruby" },
   },
-  ruby_ls = {
-    cmd = { "solargraph", "stdio" },
+  ruby_lsp = {
+    cmd = { "ruby-lsp", "stdio" },
     filetypes = { "ruby" },
   },
   jsonls = {
@@ -14,11 +14,6 @@ return {
         validate = { enable = true },
       },
     },
-  },
-  terraformls = {
-    cmd = { "terraform-ls" },
-    arg = { "server" },
-    filetypes = { "terraform", "tf", "terraform-vars" },
   },
   lua_ls = {
     Lua = {
@@ -42,9 +37,6 @@ return {
     filetypes = { "vim" },
   },
   tsserver = {},
-  -- golangci_lint_ls = {},
-
-  solidity_ls_nomicfoundation = {},
   yamlls = {
     cmd = { "yaml-language-server", "--stdio" },
     filetypes = { "yaml" },

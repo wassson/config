@@ -1,7 +1,8 @@
 # -- ruby --
 # -- Solargraph --
 [language-server]
-[language-server.solargraph]
+[language-server.ruby-lsp]
+command = "ruby-lsp"
 config.diagnostics=true
 config.formatting=false
 
@@ -9,5 +10,5 @@ config.formatting=false
 name = "ruby"
 formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
 auto-format = true
-language-servers=[{name="solargraph"}]
+language-servers=[{name="ruby-lsp"}]
 

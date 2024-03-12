@@ -7,15 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "vim_mode": false,
   "project_panel": {
     "dock": "right"
   },
-  "theme": "Ayu Dark",
+  "theme": "Andromeda",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_size": 14,
+  "buffer_font_size": 13,
   "collaboration_panel": {
+    "dock": "right",
     "enabled": false
   },
   "lsp": {

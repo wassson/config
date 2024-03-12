@@ -1,0 +1,8 @@
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-1": "workspace::ToggleRightDock"
+    }
+  }
+]
