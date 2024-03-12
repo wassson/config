@@ -1,5 +1,10 @@
 theme = "wasson"
 
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
 [editor.lsp]
 enable = true
 auto-signature-help = true
@@ -13,7 +18,9 @@ S-down = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_rig
 
 # Move cursor to end of line
 S-right = ['goto_line_end']
+S-L = ['goto_line_end']
 S-left = ['goto_line_start']
+S-H = ['goto_line_start']
 
 # leader
 [keys.normal.space]
@@ -24,4 +31,5 @@ S-up = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right
 S-down = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right', 'extend_char_left', 'delete_selection', 'move_line_up', 'add_newline_above', 'move_line_up', 'replace_with_yanked']
 
 [keys.insert]
-j = { k = "normal_mode" }
+[keys.insert.j]
+k = "normal_mode"

@@ -1,21 +1,13 @@
 # -- ruby --
 # -- Solargraph --
 [language-server]
-[language-server.ruby-lsp]
-name = "ruby-lsp"
-command = "ruby-lsp"
-
 [language-server.solargraph]
-name = "solargraph"
-command = "solargraph"
-args = ["stdio"]
-hover = true
+config.diagnostics=true
+config.formatting=false
 
 [[language]]
 name = "ruby"
+formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server"] }
 auto-format = true
-file-types = ["rb", "erb", "Gemfile", "Rakefile", "Procfile", "gemspec"]
-shebangs = ["ruby"]
-comment-token = "#"
-indent = { tab-width = 2, unit = "  " }
-language-servers = [{ name = "solargraph" }]
+language-servers=[{name="solargraph"}]
+
