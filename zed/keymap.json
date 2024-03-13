@@ -2,7 +2,14 @@
   {
     "context": "Workspace",
     "bindings": {
-      "cmd-1": "workspace::ToggleRightDock"
+      "cmd-1": "workspace::ToggleRightDock",
+      "cmd-shift-o": "projects::OpenRecent"
+    }
+  },
+  {
+    "context": "Editor",
+    "binding": {
+      "cmd-click": "editor::GoToDefinition"
     }
   }
 ]
