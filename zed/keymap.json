@@ -3,13 +3,43 @@
     "context": "Workspace",
     "bindings": {
       "cmd-1": "workspace::ToggleRightDock",
-      "cmd-shift-o": "projects::OpenRecent"
+      "shift-cmd-o": "projects::OpenRecent",
+      "cmd-alt-o": "projects::OpenRecent"
     }
   },
   {
     "context": "Editor",
-    "binding": {
-      "cmd-click": "editor::GoToDefinition"
+    "bindings": {
+      "cmd-click": "editor::GoToDefinition",
+      "shift-cmd-o": "file_finder::Toggle",
+      "cmd-shift-up": "editor::MoveLineUp",
+      "cmd-shift-down": "editor::MoveLineDown"
+    }
+  },
+  {
+    "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work in normal & visual mode
+    }
+  },
+  {
+    "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
+    "bindings": {
+      // put key-bindings here if you want them to work only in normal mode
+      // "down": ["workspace::SendKeystrokes", "4 j"]
+      // "up": ["workspace::SendKeystrokes", "4 k"]
+    }
+  },
+  {
+    "context": "Editor && vim_mode == visual && !VimWaiting && !menu",
+    "bindings": {
+      // visual, visual line & visual block modes
+    }
+  },
+  {
+    "context": "Editor && vim_mode == insert && !menu",
+    "bindings": {
+      "ctrl-f": "editor::ConfirmCompletion"
     }
   }
 ]
