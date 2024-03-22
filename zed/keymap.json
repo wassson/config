@@ -25,9 +25,7 @@
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work only in normal mode
-      // "down": ["workspace::SendKeystrokes", "4 j"]
-      // "up": ["workspace::SendKeystrokes", "4 k"]
+      "space w": "workspace::Save"
     }
   },
   {
@@ -39,6 +37,7 @@
   {
     "context": "Editor && vim_mode == insert && !menu",
     "bindings": {
+      "j k": "vim::NormalBefore",
       "ctrl-f": "editor::ConfirmCompletion"
     }
   }
