@@ -8,10 +8,16 @@
 // from the command palette or from `Zed` application menu.
 {
   "vim_mode": true,
+  "toolbar": {
+    "title": false
+  },
   "project_panel": {
     "dock": "right"
   },
   "theme": "Rosé Pine",
+  "experimental.theme_overrides": {
+    //"status_bar.background": "#1E2021"
+  },
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",

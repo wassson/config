@@ -10,13 +10,19 @@
   {
     "context": "Editor",
     "bindings": {
-      "j k": "vim::NormalBefore",
+      // "j k": "vim::NormalBefore",
       "cmd-click": "editor::GoToDefinition",
       "shift-cmd-o": "file_finder::Toggle",
       "cmd-shift-up": "editor::MoveLineUp",
       "cmd-shift-down": "editor::MoveLineDown",
       "cmd-shift-n": "pane::ActivateNextItem",
       "cmd-shift-p": "pane::ActivatePrevItem"
+    }
+  },
+  {
+    "context": "Editor && vim_mode != normal && !menu",
+    "bindings": {
+      "j k": "vim::NormalBefore"
     }
   },
   {
