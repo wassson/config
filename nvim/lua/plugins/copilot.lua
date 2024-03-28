@@ -12,7 +12,7 @@ return {
                     keymap = {
                         jump_next = "<c-j>",
                         jump_prev = "<c-k>",
-                        accept = "<c-f>",
+                        accept = "<c-a>",
                         refresh = "r",
                         open = "<M-CR>",
                     },
@@ -26,7 +26,7 @@ return {
                     auto_trigger = true,
                     debounce = 75,
                     keymap = {
-                        accept = "<c-f>",
+                        accept = "<c-a>",
                         accept_word = false,
                         accept_line = false,
                         next = "<c-j>",
@@ -34,14 +34,6 @@ return {
                         dismiss = "<C-e>",
                     },
                 },
-                filetypes = {
-                    css = true,
-                    html = false,
-                    javascript = true,
-                    ruby = true,
-                    typescript = true,
-                    yaml = true,
-                }
             })
         end,
     },

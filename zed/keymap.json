@@ -10,7 +10,6 @@
   {
     "context": "Editor",
     "bindings": {
-      // "j k": "vim::NormalBefore",
       "cmd-click": "editor::GoToDefinition",
       "shift-cmd-o": "file_finder::Toggle",
       "cmd-shift-up": "editor::MoveLineUp",
@@ -28,7 +27,9 @@
   {
     "context": "Editor && (vim_mode == normal || vim_mode == visual) && !VimWaiting && !menu",
     "bindings": {
-      // put key-bindings here if you want them to work in normal & visual mode
+      // <space> leader key stuff
+      "space f": "file_finder::Toggle",
+      "space e": "project_panel::ToggleFocus"
     }
   },
   {

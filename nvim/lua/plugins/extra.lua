@@ -152,8 +152,8 @@ return {
   {
     "ggandor/leap.nvim",
     keys = {
-      { "s",  mode = { "n", "x", "o" }, desc = "Leap forward to" },
-      { "S",  mode = { "n", "x", "o" }, desc = "Leap backward to" },
+      { "s", mode = { "n", "x", "o" }, desc = "Leap forward to" },
+      { "S", mode = { "n", "x", "o" }, desc = "Leap backward to" },
       { "gs", mode = { "n", "x", "o" }, desc = "Leap from windows" },
     },
     config = function(_, opts)
@@ -227,4 +227,25 @@ return {
     event = "BufReadPre", -- this will only start session saving when an actual file was opened
     opts = {},
   },
+
+  -- better code annotation
+  {
+    "danymat/neogen",
+    dependencies = {
+        "nvim-treesitter/nvim-treesitter",
+        "L3MON4D3/LuaSnip",
+    },
+    config = function()
+        local neogen = require("neogen")
+
+        neogen.setup({
+            snippet_engine = "luasnip"
+        })
+    end,
+    -- version = "*"
+  },
+
+  -- {
+  --   "xiyaowong/transparent.nvim"
+  -- },
 }

@@ -1,4 +1,4 @@
-theme = "ferra"
+theme = "rose_pine"
 
 [editor.cursor-shape]
 insert = "bar"
@@ -21,6 +21,10 @@ S-right = ['goto_line_end']
 S-L = ['goto_line_end']
 S-left = ['goto_line_start']
 S-H = ['goto_line_start']
+
+# Buffer
+right = 'goto_next_buffer'
+left = 'goto_previous_buffer'
 
 # leader
 [keys.normal.space]

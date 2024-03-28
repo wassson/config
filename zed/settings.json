@@ -24,9 +24,20 @@
   "buffer_font_size": 13,
   "tab_size": 2,
   "cursor_blink": false,
+  "assistant": {
+    "version": "1",
+    "button": false
+  },
   "collaboration_panel": {
+    "button": false,
     "dock": "right",
     "enabled": false
+  },
+  "chat_panel": {
+    "button": false
+  },
+  "notification_panel": {
+    "button": false
   },
   "lsp": {
     "solargraph": {

@@ -7,14 +7,15 @@ return {
   lazy = false,
   event = { "BufReadPost", "BufNewFile", "VeryLazy" },
   config = function()
-    local icons = require("config.icons")
+    -- local icons = require("config.icons")
     require("lualine").setup({
       options = {
-        theme = "catppuccin",
+        theme = "auto",
+        -- theme = "catppuccin",
         globalstatus = true,
         icons_enabled = true,
         -- component_separators = { left = "│", right = "│" },
-        component_separators = { left = icons.ui.DividerRight, right = icons.ui.DividerLeft },
+        component_separators = { left = "|", right = "|" },
         section_separators = { left = "", right = "" },
         disabled_filetypes = {
           statusline = {

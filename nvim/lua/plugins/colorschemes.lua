@@ -40,24 +40,20 @@ return {
           },
           mocha = {
             rosewater = "#ea6962",
-            --flamingo = "#ea6962",
-            -- keywords like :symbol
-            flamingo = "#8fa5ae",
+            flamingo = "#ea6962",
             red = "#ea6962",
-            orange = "#F9CF95",
             maroon = "#ea6962",
             pink = "#d3869b",
             mauve = "#d3869b",
-            peach = "#C59172",
+            peach = "#e78a4e",
             yellow = "#d8a657",
             green = "#a9b665",
             teal = "#89b482",
             sky = "#89b482",
             sapphire = "#89b482",
             blue = "#7daea3",
-            grayBlue = "#8FA5AE",
             lavender = "#7daea3",
-            text = "#f3f3f3",
+            text = "#ebdbb2",
             subtext1 = "#d5c4a1",
             subtext0 = "#bdae93",
             overlay2 = "#a89984",
@@ -71,7 +67,7 @@ return {
             crust = "#141617",
           },
         },
-        transparent_background = true,
+        transparent_background = false,
         show_end_of_buffer = false,
         integration_default = false,
         integrations = {
@@ -79,7 +75,7 @@ return {
           cmp = true,
           gitsigns = true,
           hop = true,
-          illuminate = true,
+          illuminate = { enabled = true },
           native_lsp = { enabled = true, inlay_hints = { background = true } },
           neogit = true,
           neotree = true,
@@ -104,7 +100,7 @@ return {
               CmpItemMenu = { fg = colors.surface2 },
               CursorLineNr = { fg = colors.text },
               FloatBorder = { bg = colors.base, fg = colors.surface0 },
-              GitSignsChange = { fg = colors.peach }, 
+              GitSignsChange = { fg = colors.peach },
               LineNr = { fg = colors.overlay0 },
               LspInfoBorder = { link = "FloatBorder" },
               NeoTreeDirectoryIcon = { fg = colors.subtext1 },
@@ -115,12 +111,12 @@ return {
               NeoTreeGitIgnored = { fg = colors.overlay0 },
               NeoTreeGitModified = { fg = colors.peach },
               NeoTreeGitStaged = { fg = colors.green },
-              NeoTreeGitUnstaged = { fg = colors.mauve },
+              NeoTreeGitUnstaged = { fg = colors.red },
               NeoTreeGitUntracked = { fg = colors.green },
               NeoTreeIndent = { fg = colors.surface1 },
               NeoTreeNormal = { bg = colors.mantle },
               NeoTreeNormalNC = { bg = colors.mantle },
-              NeoTreeRootName = { fg = colors.subtext1, style = { "bold" } },
+              NeoTreeRootName = { fg = colors.subtext1 },
               NeoTreeTabActive = { fg = colors.text, bg = colors.mantle },
               NeoTreeTabInactive = { fg = colors.surface2, bg = colors.crust },
               NeoTreeTabSeparatorActive = { fg = colors.mantle, bg = colors.mantle },
@@ -162,8 +158,8 @@ return {
               Title = { fg = colors.peach },
               Special = { fg = colors.yellow },
               SpecialChar = { fg = colors.yellow },
-              Type = { fg = colors.yellow, style = { "bold" } },
-              Function = { fg = colors.green, style = { "bold" } },
+              Type = { fg = colors.yellow },
+              Function = { fg = colors.green },
               Delimiter = { fg = colors.subtext1 },
               Ignore = { fg = colors.subtext1 },
               Macro = { fg = colors.teal },
@@ -171,7 +167,7 @@ return {
               TSAnnotation = { fg = colors.mauve },
               TSAttribute = { fg = colors.mauve },
               TSBoolean = { fg = colors.mauve },
-              TSCharacter = { fg = colors.orange },
+              TSCharacter = { fg = colors.teal },
               TSCharacterSpecial = { link = "SpecialChar" },
               TSComment = { link = "Comment" },
               TSConditional = { fg = colors.red },
@@ -189,19 +185,19 @@ return {
               TSFloat = { fg = colors.mauve },
               TSFuncBuiltin = { fg = colors.green },
               TSFuncMacro = { fg = colors.green },
-              TSFunction = { fg = colors.orange },
+              TSFunction = { fg = colors.green },
               TSFunctionCall = { fg = colors.green },
-              TSInclude = { fg = colors.peach },
-              TSKeyword = { fg = colors.peach },
-              TSKeywordFunction = { fg = colors.peach },
+              TSInclude = { fg = colors.red },
+              TSKeyword = { fg = colors.red },
+              TSKeywordFunction = { fg = colors.red },
               TSKeywordOperator = { fg = colors.peach },
-              TSKeywordReturn = { fg = colors.peach },
+              TSKeywordReturn = { fg = colors.red },
               TSLabel = { fg = colors.peach },
               TSLiteral = { link = "String" },
               TSMath = { fg = colors.blue },
               TSMethod = { fg = colors.green },
               TSMethodCall = { fg = colors.green },
-              TSNamespace = { fg = colors.orange },
+              TSNamespace = { fg = colors.yellow },
               TSNone = { fg = colors.text },
               TSNumber = { fg = colors.mauve },
               TSOperator = { fg = colors.peach },
@@ -228,10 +224,10 @@ return {
               TSTextReference = { link = "Constant" },
               TSTitle = { link = "Title" },
               TSTodo = { link = "Todo" },
-              TSType = { fg = colors.orange, style = { "bold" } },
-              TSTypeBuiltin = { fg = colors.yellow, style = { "bold" } },
-              TSTypeDefinition = { fg = colors.yellow, style = { "bold" } },
-              TSTypeQualifier = { fg = colors.peach, style = { "bold" } },
+              TSType = { fg = colors.yellow },
+              TSTypeBuiltin = { fg = colors.yellow },
+              TSTypeDefinition = { fg = colors.yellow },
+              TSTypeQualifier = { fg = colors.peach },
               TSURI = { fg = colors.blue },
               TSVariable = { fg = colors.text },
               TSVariableBuiltin = { fg = colors.mauve },
@@ -359,6 +355,94 @@ return {
       vim.api.nvim_set_hl(0, "NavicSeparator", { default = true, bg = "none", fg = "#eedaad" })
 
       vim.api.nvim_command("colorscheme catppuccin")
+    end,
+  },
+  {
+    "sainnhe/gruvbox-material",
+    enabled = true,
+    priority = 1000,
+    config = function()
+      vim.g.gruvbox_material_transparent_background = 0
+      vim.g.gruvbox_material_foreground = "mix"
+      vim.g.gruvbox_material_background = "hard" -- soft, medium, hard
+      vim.g.gruvbox_material_ui_contrast = "high" -- The contrast of line numbers, indent lines, etc.
+      vim.g.gruvbox_material_float_style = "bright" -- Background of floating windows
+      vim.g.gruvbox_material_statusline_style = "material"
+      vim.g.gruvbox_material_cursor = "auto"
+
+      -- vim.g.gruvbox_material_colors_override = { bg0 = '#000000' } -- #0e1010
+      -- vim.g.gruvbox_material_colors_override = { bg0 = "#121212" }
+      -- vim.g.gruvbox_material_better_performance = 1
+
+      -- vim.cmd.colorscheme("gruvbox-material")
+    end,
+  },
+  {
+    "folke/tokyonight.nvim",
+    enabled = false,
+    lazy = false,
+    priority = 1000,
+    opts = {},
+  },
+  {
+    "LunarVim/primer.nvim",
+    enabled = false,
+    priority = 1000,
+    config = function()
+      -- vim.cmd.colorscheme 'primer_dark'
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    priority = 1000,
+    config = function()
+      require("rose-pine").setup({
+        -- disable_background = true,
+
+        styles = {
+          bold = false,
+          italic = false,
+          transparency = false,
+        },
+        highlight_groups = {
+          TelescopeBorder = { fg = "overlay", bg = "overlay" },
+          TelescopeNormal = { fg = "subtle", bg = "overlay" },
+          TelescopeSelection = { fg = "text", bg = "highlight_med" },
+          TelescopeSelectionCaret = { fg = "love", bg = "highlight_med" },
+          TelescopeMultiSelection = { fg = "text", bg = "highlight_high" },
+
+          TelescopeTitle = { fg = "base", bg = "love" },
+          TelescopePromptTitle = { fg = "base", bg = "pine" },
+          TelescopePreviewTitle = { fg = "base", bg = "iris" },
+
+          TelescopePromptNormal = { fg = "text", bg = "surface" },
+          TelescopePromptBorder = { fg = "surface", bg = "surface" },
+        },
+      })
+
+      -- vim.cmd.colorscheme("rose-pine")
+    end,
+  },
+  {
+    "oxfist/night-owl.nvim",
+    enabled = false,
+    lazy = false, -- make sure we load this during startup if it is your main colorscheme
+    priority = 1000, -- make sure to load this before all the other start plugins
+    config = function()
+      local night_owl = require("night-owl")
+
+      -- 👇 Add your own personal settings here
+      night_owl.setup({
+        -- These are the default settings
+        bold = false,
+        italics = false,
+        underline = false,
+        undercurl = false,
+      })
+
+      -- load the colorscheme here
+      -- vim.cmd.colorscheme("night-owl")
     end,
   },
 }

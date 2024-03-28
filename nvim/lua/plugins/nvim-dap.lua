@@ -6,11 +6,13 @@ return {
         "theHamsta/nvim-dap-virtual-text",
         "nvim-telescope/telescope-dap.nvim",
         "folke/neodev.nvim",
+        "nvim-neotest/nvim-nio"
     },
     config = function()
         local dap = require("dap")
         local dapui = require("dapui")
         local virtual_text = require("nvim-dap-virtual-text")
+        local dap_go = require("dap-go")
 
         dap.adapters.lldb = {
             type = 'executable',
@@ -41,5 +43,6 @@ return {
 
         dapui.setup()
         virtual_text.setup()
+        dap_go.setup()
     end
 }

@@ -1,5 +1,6 @@
 return {
   "RRethy/vim-illuminate",
+  enabled = false,
   event = { "BufReadPost", "BufNewFile" },
   opts = {
     delay = 200,
@@ -45,6 +46,19 @@ return {
         local buffer = vim.api.nvim_get_current_buf()
         map("]]", "next", buffer)
         map("[[", "prev", buffer)
+      end,
+    })
+
+    vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+    vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
+
+    vim.api.nvim_create_autocmd({ "ColorScheme" }, {
+      pattern = { "*" },
+      callback = function(_)
+        vim.api.nvim_set_hl(0, "IlluminatedWordText", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "IlluminatedWordRead", { link = "Visual" })
+        vim.api.nvim_set_hl(0, "IlluminatedWordWrite", { link = "Visual" })
       end,
     })
   end,

@@ -3,9 +3,9 @@ return {
   [";"] = { ":Alpha<CR>", "Dashboard" },
   w = { ":w!<CR>", "Save" },
   q = { ":confirm q<CR>", "Quit" },
-  h = { ":nohlsearch<CR>", "No Highlight" },
-  p = { require("telescope.builtin").lsp_document_symbols, "Document Symbols" },
-  P = { require("telescope.builtin").lsp_dynamic_workspace_symbols, "Workspace Symbols" },
+  -- h = { ":nohlsearch<CR>", "No Highlight" },
+  -- p = { require("telescope.builtin").lsp_document_symbols, "Document Symbols" },
+  -- P = { require("telescope.builtin").lsp_dynamic_workspace_symbols, "Workspace Symbols" },
   f = { require("config.utils").telescope_git_or_file, "Find Files (Root)" },
   v = "Go to definition in a split",
   a = "Swap next param",
@@ -108,6 +108,12 @@ return {
       v = { "<cmd>Telescope dap variables<cr>", "Dap Variables" },
       f = { "<cmd>Telescope dap frames<cr>", "Dap Frames" },
     },
+    N = {
+      function ()
+        require("telescope.builtin").find_files({ cwd = vim.fn.stdpath("config") })
+      end,
+      "Search Neovim Config",
+    },
   },
   T = {
     name = "+Todo",
@@ -127,6 +133,12 @@ return {
     l = { require("dap").run_last, "Last" },
     u = { require("dapui").toggle, "UI" },
     x = { require("dap").terminate, "Exit" },
+  },
+  n = {
+    name = "+Neogen",
+    g = { "<cmd>lua require('neogen').generate()<cr>", "Generate Annotatin" },
+    f = { "<cmd>lua require('neogen').generate({ type = 'func' })<cr>", "Generate Function Annotation" },
+    t = { "<cmd>lua require('neogen').generate({ type = 'type' })<cr>", "Generate Type Annotation" },
   },
   t = {
     name = "+Tests",
