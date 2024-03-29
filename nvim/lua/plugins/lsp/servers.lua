@@ -1,4 +1,11 @@
 return {
+  solargraph = {
+    settings = {
+      Solargraph = {
+        diagnostics = true,
+      },
+    }
+  },
   jsonls = {
     settings = {
       json = {
