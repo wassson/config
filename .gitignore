@@ -1,3 +1,5 @@
 .DS_Store
+configstore
 github-copilot/hosts.json
 nvim/pack/github/start/copilot.vim/
+yarn/global
