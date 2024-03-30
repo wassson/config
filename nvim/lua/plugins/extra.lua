@@ -178,7 +178,7 @@ return {
   {
     "SmiteshP/nvim-navic",
     config = function()
-      local icons = require("config.icons")
+      --local icons = require("config.icons")
       require("nvim-navic").setup({
         highlight = true,
         lsp = {
@@ -186,7 +186,7 @@ return {
           preference = { "typescript-tools" },
         },
         click = true,
-        separator = " " .. icons.ui.ChevronRight .. " ",
+        --separator = " " .. icons.ui.ChevronRight .. " ",
         depth_limit = 0,
         depth_limit_indicator = "..",
         icons = {
