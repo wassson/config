@@ -27,9 +27,9 @@ return {
         capabilities = capabilities
       })
 
-      lspconfig.ruby_ls.setup({
-        capabilities = capabilities
-      })
+      -- lspconfig.ruby_ls.setup({
+      --   capabilities = capabilities
+      -- })
 
       lspconfig.solargraph.setup({
         capabilities = capabilities

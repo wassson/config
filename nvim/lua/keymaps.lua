@@ -1,6 +1,24 @@
 local opts = { noremap = true, silent = true }
 local map = vim.keymap.set
 
+-- Custom keymaps
+--
+-- Navigate buffers
+map("n", "<Right>", ":bnext<CR>", opts)
+map("n", "<Left>", ":bprevious<CR>", opts)
+
+-- Move selected line / block of text in visual mode
+map("v", "J", ":m '>+1<CR>gv=gv", opts)
+map("v", "K", ":m '<-2<CR>gv=gv", opts)
+
+-- Map "leader w" to save
+vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
+
+-- Map "leader q" to quit
+vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
+
+-------------------------------------------------------
+
 -- Yank into system clipboard
 vim.keymap.set({'n', 'v'}, '<leader>y', '"+y') -- yank motion
 vim.keymap.set({'n', 'v'}, '<leader>Y', '"+Y') -- yank line
@@ -15,23 +33,9 @@ vim.keymap.set('n', '<leader>P', '"+P')  -- paste before cursor
 
 vim.api.nvim_set_keymap('i', 'jk', '<ESC>', {noremap = true, silent = true})
 
--- Map "leader w" to save
-vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
-
--- Map "leader q" to quit
-vim.api.nvim_set_keymap('n', '<leader>q', ':q<CR>', {noremap = true, silent = true})
-
--- Navigate buffers
-map("n", "<Right>", ":bnext<CR>", opts)
-map("n", "<Left>", ":bprevious<CR>", opts)
-
 -- Keep cursor centered when scrolling
 map("n", "<C-d>", "<C-d>zz", opts)
 map("n", "<C-u>", "<C-u>zz", opts)
-
--- Move selected line / block of text in visual mode
-map("v", "J", ":m '>+1<CR>gv=gv", opts)
-map("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 -- Remap for dealing with visual line wraps
 map("n", "k", "v:count == 0 ? 'gk' : 'k'", { expr = true })

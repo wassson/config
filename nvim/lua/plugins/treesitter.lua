@@ -8,6 +8,11 @@ return {
         auto_install = true,
         highlight = { enabled = true },
         indent = { enabled = true },
+        vim.filetype.add({
+          pattern = {
+            ['.*%.html%.erb'] = 'html',
+          },
+        }),
       })
     end
   },
