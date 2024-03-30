@@ -11,6 +11,14 @@ map("n", "<Left>", ":bprevious<CR>", opts)
 map("v", "J", ":m '>+1<CR>gv=gv", opts)
 map("v", "K", ":m '<-2<CR>gv=gv", opts)
 
+-- Jump to the beginning of the line
+map("n", "<D-S-Left>", "^", opts)
+map("i", "<D-S-Left>", "<C-o>^", opts)
+
+-- Jump to the end of the line
+map("n", "<D-S-Right>", "g_", opts)
+map("i", "<D-S-Right>", "<C-o>g_", opts)
+
 -- Map "leader w" to save
 vim.api.nvim_set_keymap('n', '<leader>w', ':w<CR>', {noremap = true, silent = true})
 
