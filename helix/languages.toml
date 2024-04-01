@@ -7,6 +7,67 @@ config.diagnostics=true
 config.formatting=false
 
 [[language]]
+name = "html"
+language-servers = [ "vscode-html-language-server", "tailwindcss-ls" ]
+
+[[language]]
+name = "javascript"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "scls", "graphql"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 2, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "tsx"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls", "scls", "graphql"]
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[[language]]
+name = "jsx"
+language-servers = [ "typescript-language-server", "tailwindcss-react", "eslint", "emmet-ls","scls", "graphql"]
+grammar = "javascript"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript"] }
+indent = { tab-width = 4, unit = "\t" }
+auto-format = true
+
+[language-server.vscode-html-language-server]
+config = { userLanguages = { erb = "html", "*.html.erb" = "html" }}
+
+[language-server.tailwindcss-ls]
+config = { userLanguages = { erb = "html", "*.html.erb" = "html" }}
+
+[[language]]
+name = "typescript"
+language-servers = [ { name = "typescript-language-server", except-features = [ "format" ] } ]
+
+[language-server.typescript-language-server.config]
+documentFormatting = false
+hostInfo = "helix"
+
+[language-server.typescript-language-server.config.typescript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
+
+[language-server.typescript-language-server.config.completions]
+completeFunctionCalls = true
+
+[language-server.typescript-language-server.config.javascript.inlayHints]
+includeInlayEnumMemberValueHints = true
+includeInlayFunctionLikeReturnTypeHints = true
+includeInlayFunctionParameterTypeHints = true
+includeInlayParameterNameHints = "all"
+includeInlayParameterNameHintsWhenArgumentMatchesName = true
+includeInlayPropertyDeclarationTypeHints = true
+includeInlayVariableTypeHints = true
+
+[[language]]
 name = "ruby"
 formatter = { command = "rubocop", args = ["--stdin", "foo.rb", "-a", "--stderr", "--fail-level", "fatal", "--server", "socket"] }
 auto-format = true

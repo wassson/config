@@ -1,4 +1,11 @@
-theme = "rose_pine"
+theme = "gruvbox"
+
+[editor]
+auto-completion = true
+bufferline = "always"
+cursorline = true
+# add diagnostics 2nd
+gutters = ["diff", "line-numbers", "spacer"]
 
 [editor.cursor-shape]
 insert = "bar"
@@ -9,7 +16,14 @@ select = "underline"
 enable = true
 auto-signature-help = true
 display-messages = true
+display-inlay-hints = true
 goto-reference-include-declaration = true
+snippets = true
+
+[editor.statusline]
+left = ["diagnostics", "spinner", "file-modification-indicator"]
+center = []
+right = ["mode"]
 
 [keys.normal]
 # Move line/block

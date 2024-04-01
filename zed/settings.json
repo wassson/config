@@ -14,7 +14,7 @@
   "project_panel": {
     "dock": "right"
   },
-  "theme": "Andromeda",
+  "theme": "Gruvbox Dark Hard",
   "experimental.theme_overrides": {
     //"status_bar.background": "#1E2021"
   },
