@@ -6,8 +6,8 @@ vim.g.loaded_netrwPlugin = 1                    --  disable netrw
 
 vim.opt.incsearch = true                        -- make search act like search in modern browsers
 vim.opt.backup = false                          -- creates a backup file
-vim.opt.clipboard = "unnamed,unnamedplus"               -- allows neovim to access the system clipboard
-vim.opt.cmdheight = 1                           -- more space in the neovim command line for displaying messages
+vim.opt.clipboard = "unnamed,unnamedplus"       -- allows neovim to access the system clipboard
+vim.opt.cmdheight = 2                           -- more space in the neovim command line for displaying messages
 vim.opt.completeopt = { "menuone", "noselect" } -- mostly just for cmp
 vim.opt.conceallevel = 0                        -- so that `` is visible in markdown files
 vim.opt.hlsearch = true                         -- highlight all matches on previous search pattern
@@ -43,7 +43,5 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.title = true                            -- set the title of window to the value of the titlestring
 vim.opt.confirm = true                          -- confirm to save changes before exiting modified buffer
 vim.opt.fillchars = { eob = " " }               -- change the character at the end of buffer
+vim.opt.winbar = "%#WinBarSeparator#%="
 
--- vim.opt.cursorlineopt = "number"              -- set the cursorline
--- vim.opt.tabstop = 2                           -- insert 2 spaces for a tab
--- vim.opt.laststatus = 0                          -- Always display the status line

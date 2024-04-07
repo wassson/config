@@ -21,5 +21,11 @@ require("lazy").setup({ import = "plugins" }, {
         change_detection = { notify = false }
 })
 
+function _G.P(value)
+  print(vim.inspect(value))
+  return value
+end
+
+
 require("keymaps")
 require("options")
