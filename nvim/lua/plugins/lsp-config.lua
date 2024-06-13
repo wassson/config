@@ -9,7 +9,7 @@ return {
     "williamboman/mason-lspconfig.nvim",
     config = function()
       require("mason-lspconfig").setup({
-        ensure_insalled = { "lua_ls", "rubocop", "solargraph", "tsserver" }
+        ensure_insalled = { "lua_ls", "rubocop", "ruby_lsp", "tsserver" }
       })
     end
   },
@@ -27,13 +27,13 @@ return {
         capabilities = capabilities
       })
 
-      -- lspconfig.ruby_ls.setup({
-      --   capabilities = capabilities
-      -- })
-
-      lspconfig.solargraph.setup({
+      lspconfig.ruby_lsp.setup({
         capabilities = capabilities
       })
+
+      --lspconfig.solargraph.setup({
+        --capabilities = capabilities
+      --})
 
       lspconfig.tsserver.setup({
         capabilities = capabilities

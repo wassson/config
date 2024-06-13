@@ -35,7 +35,9 @@
   {
     "context": "Editor && vim_mode == normal && !VimWaiting && !menu",
     "bindings": {
-      "space w": "workspace::Save"
+      "space w": "workspace::Save",
+      "right": "pane::ActivateNextItem",
+      "left": "pane::ActivatePrevItem"
     }
   },
   {

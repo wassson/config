@@ -43,5 +43,4 @@ vim.opt.guifont = "monospace:h17"               -- the font used in graphical ne
 vim.opt.title = true                            -- set the title of window to the value of the titlestring
 vim.opt.confirm = true                          -- confirm to save changes before exiting modified buffer
 vim.opt.fillchars = { eob = " " }               -- change the character at the end of buffer
-vim.opt.winbar = "%#WinBarSeparator#%="
-
+vim.opt.winbar = "%#WinBarSeparator#%="	-- spacer at the top of the window

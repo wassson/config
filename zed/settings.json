@@ -8,16 +8,18 @@
 // from the command palette or from `Zed` application menu.
 {
   "vim_mode": true,
+  "tab_bar": {
+    "show_nav_history_buttons": false,
+    "show": false
+  },
   "toolbar": {
-    "title": false
+    "breadcrumbs": true,
+    "title": true
   },
   "project_panel": {
     "dock": "right"
   },
   "theme": "Rosé Pine Moon",
-  "experimental.theme_overrides": {
-    //"status_bar.background": "#1E2021"
-  },
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -39,10 +41,36 @@
   "notification_panel": {
     "button": false
   },
+  "git": {
+    "inline_blame": {
+      "enabled": false
+    }
+  },
+  "indent_guides": {
+    "enabled": false
+  },
+  "languages": {
+    "Ruby": {
+      "language_servers": ["ruby-lsp", "!solargraph", "..."]
+    }
+  },
   "lsp": {
-    "solargraph": {
+    "ruby-lsp": {
       "initialization_options": {
-        "diagnostics": true
+        "enabledFeatures": {
+          "diagnostics": false
+        }
+      }
+    },
+    "tailwindcss-language-server": {
+      "settings": {
+        "includeLanguages": {
+          "erb": "html",
+          "ruby": "html"
+        },
+        "experimental": {
+          "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
+        }
       }
     }
   },
