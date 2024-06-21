@@ -30,14 +30,11 @@ require("lazy").setup({
     extras = {
       lsp = {
         enabled = true,
-        -- ... other extras ...
         none_ls = true,
       },
     },
 })
 
--- to learn how to use mason.nvim
--- read this: https://github.com/VonHeikemen/lsp-zero.nvim/blob/v3.x/doc/md/guides/integrate-with-mason-nvim.md
 require('mason').setup({})
 require('mason-lspconfig').setup({
   handlers = {

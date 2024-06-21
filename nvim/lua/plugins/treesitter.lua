@@ -8,6 +8,7 @@ return {
         auto_install = true,
         highlight = { enabled = true },
         indent = { enabled = true },
+        ensure_installed = { "ruby", "javascript", "typescript" },
         vim.filetype.add({
           pattern = {
             ['.*%.html%.erb'] = 'html',

@@ -5,7 +5,6 @@ return {
       lua = { "luacheck" },
       javascript = { "eslint" },
       typescript = { "eslint" },
-      -- ruby = { "rubocop" },
       erb = { "erb-lint" },
       sh = { "shellcheck" },
       markdown = { "markdownlint" },
