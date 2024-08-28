@@ -12,9 +12,13 @@
     "show_nav_history_buttons": false,
     "show": true
   },
+  "tabs": {
+    "file_icons": false
+  },
   "toolbar": {
-    "breadcrumbs": true,
-    "title": true
+    "breadcrumbs": false,
+    "title": true,
+    "quick_actions": false
   },
   "project_panel": {
     "dock": "right"
@@ -27,8 +31,12 @@
   "tab_size": 2,
   "cursor_blink": false,
   "assistant": {
-    "version": "1",
-    "button": false
+    "default_model": {
+      "provider": "zed.dev",
+      "model": "claude-3-5-sonnet-20240620"
+    },
+    "version": "2",
+    "button": true
   },
   "collaboration_panel": {
     "button": false,
@@ -50,12 +58,36 @@
     "enabled": false
   },
   "languages": {
+    "C++": {
+      "language_servers": ["clangd"],
+      "format_on_save": "on"
+    },
+    "JavaScript": {
+      "format_on_save": "off"
+    },
     "Ruby": {
+      "tab_size": 2,
+      "enable_language_server": true,
       "language_servers": [
         "ruby-lsp",
         "!solargraph",
         "tailwind-language-server"
-      ]
+      ],
+      "format_on_save": "on",
+      "formatter": {
+        "external": {
+          "command": "./bin/rubocop",
+          "arguments": [
+            "--fail-level",
+            "error",
+            "--auto-correct",
+            "--stdin",
+            "{buffer_path}",
+            "--stderr",
+            "--server"
+          ]
+        }
+      }
     }
   },
   "lsp": {
@@ -80,11 +112,9 @@
   },
   "language_overrides": {
     "JavaScript": {
-      "format_on_save": {
-        "external": {
-          "command": "prettier",
-          "arguments": ["--stdin-filepath", "{buffer_path}"]
-        }
+      "external": {
+        "command": "prettier",
+        "arguments": ["--stdin-filepath", "{buffer_path}"]
       }
     }
   }

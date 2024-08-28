@@ -1,0 +1,53 @@
+theme = "rose_pine_moon"
+
+[editor]
+auto-completion = true
+bufferline = "always"
+cursorline = true
+# add diagnostics 2nd
+gutters = ["diff", "line-numbers", "spacer"]
+
+[editor.cursor-shape]
+insert = "bar"
+normal = "block"
+select = "underline"
+
+[editor.lsp]
+enable = true
+auto-signature-help = true
+display-messages = true
+display-inlay-hints = true
+goto-reference-include-declaration = true
+snippets = true
+
+[editor.statusline]
+left = ["diagnostics", "spinner", "file-modification-indicator"]
+center = []
+right = ["mode"]
+
+[keys.normal]
+# Move line/block
+S-up = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right', 'extend_char_left', 'delete_selection', 'move_line_up', 'add_newline_above', 'move_line_up', 'replace_with_yanked']
+S-down = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right', 'extend_char_left', 'delete_selection', 'add_newline_below', 'move_line_down', 'replace_with_yanked']
+
+# Move cursor to end of line
+S-right = ['goto_line_end']
+S-L = ['goto_line_end']
+S-left = ['goto_line_start']
+S-H = ['goto_line_start']
+
+# Buffer
+right = 'goto_next_buffer'
+left = 'goto_previous_buffer'
+
+# leader
+[keys.normal.space]
+w = ':w'
+
+[keys.select]
+S-up = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right', 'extend_char_left', 'delete_selection', 'add_newline_below', 'move_line_down', 'replace_with_yanked']
+S-down = ['ensure_selections_forward', 'extend_to_line_bounds', 'extend_char_right', 'extend_char_left', 'delete_selection', 'move_line_up', 'add_newline_above', 'move_line_up', 'replace_with_yanked']
+
+[keys.insert]
+[keys.insert.j]
+k = "normal_mode"
