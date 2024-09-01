@@ -12,7 +12,7 @@ return {
     --                 keymap = {
     --                     jump_next = "<c-j>",
     --                     jump_prev = "<c-k>",
-    --                     accept = "<c-f>",
+    --                     accept = "<c-a>",
     --                     refresh = "r",
     --                     open = "<M-CR>",
     --                 },
@@ -26,7 +26,7 @@ return {
     --                 auto_trigger = true,
     --                 debounce = 75,
     --                 keymap = {
-    --                     accept = "<c-f>",
+    --                     accept = "<c-a>",
     --                     accept_word = false,
     --                     accept_line = false,
     --                     next = "<c-j>",
@@ -37,4 +37,12 @@ return {
     --         })
     --     end,
     -- },
+
+    -- {
+    --     "zbirenbaum/copilot-cmp",
+    --     -- after = { "copilot.lua" },
+    --     config = function()
+    --         require("copilot_cmp").setup()
+    --     end,
+    -- }
 }

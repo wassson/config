@@ -23,7 +23,7 @@
   "project_panel": {
     "dock": "right"
   },
-  "theme": "Rosé Pine",
+  "theme": "Rosé Pine Moon",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -62,6 +62,11 @@
       "language_servers": ["clangd"],
       "format_on_save": "on"
     },
+    "GDScript": {
+      "tab_size": 2,
+      "hard_tabs": true,
+      "format_on_save": "on"
+    },
     "JavaScript": {
       "format_on_save": "off"
     },
@@ -91,6 +96,11 @@
     }
   },
   "lsp": {
+    "gdscript": {
+      "binary": {
+        "arguments": ["127.0.0.1", "6005"]
+      }
+    },
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
