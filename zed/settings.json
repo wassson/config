@@ -78,7 +78,7 @@
         "!solargraph",
         "tailwind-language-server"
       ],
-      "format_on_save": "on",
+      "format_on_save": "off",
       "formatter": {
         "external": {
           "command": "./bin/rubocop",
@@ -93,6 +93,9 @@
           ]
         }
       }
+    },
+    "Rust": {
+      "tab_size": 4
     }
   },
   "lsp": {
@@ -104,7 +107,7 @@
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
-          "diagnostics": true
+          "diagnostics": false
         }
       }
     },
