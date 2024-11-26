@@ -58,6 +58,9 @@
     "enabled": false
   },
   "languages": {
+    "CSharp": {
+      "tab_size": 4
+    },
     "C++": {
       "language_servers": ["clangd"],
       "format_on_save": "on"
@@ -102,6 +105,12 @@
     "gdscript": {
       "binary": {
         "arguments": ["127.0.0.1", "6005"]
+      }
+    },
+    "omnisharp": {
+      "binary": {
+        "path": "/opt/homebrew/bin/dotnet",
+        "arguments": ["optional", "additional", "args", "-lsp"]
       }
     },
     "ruby-lsp": {
