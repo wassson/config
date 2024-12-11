@@ -1,0 +1,21 @@
+theme = "horizon-dark"
+
+[keys.normal]
+a = ["move_char_right", "insert_mode"]
+b = { d = ":buffer-close" }
+"left" = ":buffer-previous"
+"right" = ":buffer-next"
+"S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
+"S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
+
+[keys.insert]
+j = { k = "normal_mode" }
+
+[editor]
+bufferline = "always"
+cursorline = true
+# line-number = "relative"
+
+[editor.cursor-shape]
+insert = "bar"
+

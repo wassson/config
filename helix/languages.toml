@@ -1,0 +1,30 @@
+[[language]]
+name = "ruby"
+formatter = { command = "bundle", args = [ "exec", "stree", "format" ]}
+language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }]
+auto-format = false
+auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
+
+[language-server.ruby-lsp]
+command = "ruby-lsp"
+
+[language-server.rubocop]
+command = "bundle"
+args = ["exec", "rubocop", "--lsp"]
+
+[[language]]
+name = "erb"
+file-types = ["erb", "html"]
+# language-servers = [ "tailwindcss-ls" ]
+
+[language.auto-pairs]
+'<' = '>'
+'%' = '%'
+"'" = "'"
+'"' = '"'
+
+[[language]]
+name = "javascript"
+formatter = { command = 'npx', args = ["prettier", "--parser", "typescript", "--no-semi" ] }
+auto-format = true
+file-types = ["js", "jsx"]
