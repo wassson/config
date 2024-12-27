@@ -1,16 +1,20 @@
 [[language]]
 name = "ruby"
 formatter = { command = "bundle", args = [ "exec", "stree", "format" ]}
-language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }]
+language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }, { name = "solargraph"}]
 auto-format = false
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
 
 [language-server.ruby-lsp]
 command = "ruby-lsp"
 
-[language-server.rubocop]
-command = "bundle"
-args = ["exec", "rubocop", "--lsp"]
+[language-server.solargraph]
+command = "solargraph"
+
+# [language-server.rubocop]
+# command = "bundle"
+# args = ["exec", "rubocop"]
+# args = ["exec", "rubocop", "--lsp"]
 
 [[language]]
 name = "erb"
