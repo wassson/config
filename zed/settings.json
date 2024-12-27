@@ -7,7 +7,19 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "vim_mode": true,
+  "features": {
+    "inline_completion_provider": "supermaven"
+  },
+  "file_finder": {
+    "modal_max_width": "large"
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true,
+    "enable_preview_from_code_navigation": true
+  },
+  "project_panel": {
+    "dock": "right"
+  },
   "tab_bar": {
     "show_nav_history_buttons": false,
     "show": true
@@ -20,10 +32,8 @@
     "title": true,
     "quick_actions": false
   },
-  "project_panel": {
-    "dock": "right"
-  },
-  "theme": "JetBrains New Dark",
+  "vim_mode": true,
+  "theme": "Rosé Pine Moon",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
