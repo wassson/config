@@ -7,6 +7,7 @@ inherits = "gruvbox"
 "ui.bufferline" = { bg = "#1C2021" }
 "ui.bufferline.active" = { bg = "#514944" }
 "ui.bufferline.background" = { bg = "#1C2021" }
+"ui.statusline" = { bg = "#1C2021" }
 
 "ui.cursor.primary" = { modifiers = ["reversed"] }
 "ui.cursor.match" = { bg = "bg2" }

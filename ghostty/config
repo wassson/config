@@ -1,18 +1,18 @@
 # themes
 # gruvbox
 background = 1E2021
-theme = GruvboxDarkHard
+# theme = GruvboxDarkHard
 
 # rose-pine
 # background = 232137
-# theme = rose-pine
+theme = rose-pine
 
 # window
-adjust-cell-height = 35%
+adjust-cell-height = 36%
 # background-opacity = 0.96
 font-family = BerkeleyMono Nerd Font
-font-size = 14
-macos-titlebar-style = hidden
+font-size = 13
+# macos-titlebar-style = hidden
 mouse-scroll-multiplier = 2
 mouse-hide-while-typing = true
 shell-integration = zsh

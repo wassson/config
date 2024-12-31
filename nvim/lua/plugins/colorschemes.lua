@@ -3,10 +3,10 @@ return {
     "rose-pine/neovim",
     config = function()
       require('rose-pine').setup({
-        -- variant = 'moon'
+        variant = 'moon'
       })
 
-      -- vim.cmd.colorscheme("rose-pine")
+      vim.cmd.colorscheme("rose-pine")
     end
   },
   {
@@ -20,29 +20,29 @@ return {
     version = "*",
     config = function()
       -- vim.cmd.colorscheme("horizon")
-      vim.o.background = "dark"
+      -- vim.o.background = "dark"
     end
   },
-  -- {
-  --   "ellisonleao/gruvbox.nvim",
-  --   config = function()
-  --     require("gruvbox").setup({
-  --       terminal_colors = true,
-  --       italic = {
-  --         strings = false,
-  --         emphasis = false,
-  --         comments = true,
-  --         operators = false,
-  --         folds = true,
-  --       },
-  --       contrast = "hard",
-  --       palette_overrides = {
-  --       },
-  --     })
-  --     -- vim.cmd([[highlight @punctuation.bracket guifg=#ffffff]])
-  --     vim.cmd("colorscheme gruvbox")
-  --   end
-  -- },
+  {
+    "ellisonleao/gruvbox.nvim",
+    config = function()
+      require("gruvbox").setup({
+        terminal_colors = true,
+        italic = {
+          strings = false,
+          emphasis = false,
+          comments = true,
+          operators = false,
+          folds = true,
+        },
+        contrast = "hard",
+        palette_overrides = {
+        },
+      })
+      -- vim.cmd([[highlight @punctuation.bracket guifg=#ffffff]])
+      -- vim.cmd("colorscheme gruvbox")
+    end
+  },
   {
     "sainnhe/gruvbox-material",
     enabled = true,
@@ -56,7 +56,7 @@ return {
       vim.g.gruvbox_material_statusline_style = "original"
       vim.g.gruvbox_material_cursor = "auto"
 
-      vim.cmd.colorscheme("gruvbox-material")
+      -- vim.cmd.colorscheme("gruvbox-material")
     end,
   },
 }

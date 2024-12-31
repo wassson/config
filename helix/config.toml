@@ -18,7 +18,6 @@ j = { k = "normal_mode" }
 [editor]
 bufferline = "always"
 cursorline = true
-# line-number = "relative"
 
 [editor.cursor-shape]
 insert = "bar"

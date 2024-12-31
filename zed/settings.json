@@ -33,7 +33,7 @@
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "Rosé Pine Moon",
+  "theme": "Gruvbox Dark Hard",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -81,6 +81,9 @@
       "format_on_save": "on"
     },
     "JavaScript": {
+      "format_on_save": "off"
+    },
+    "JSON": {
       "format_on_save": "off"
     },
     "Ruby": {
