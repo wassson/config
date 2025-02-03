@@ -1,25 +1,22 @@
 [[language]]
 name = "ruby"
 formatter = { command = "bundle", args = [ "exec", "stree", "format" ]}
-language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }, { name = "solargraph"}]
+language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }, { name = "solargraph" }]
 auto-format = false
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
 
 [language-server.ruby-lsp]
 command = "ruby-lsp"
 
-[language-server.solargraph]
-command = "solargraph"
-
-# [language-server.rubocop]
-# command = "bundle"
+[language-server.rubocop]
+command = "bundle"
 # args = ["exec", "rubocop"]
-# args = ["exec", "rubocop", "--lsp"]
+args = ["exec", "rubocop", "--lsp"]
 
 [[language]]
 name = "erb"
 file-types = ["erb", "html"]
-# language-servers = [ "tailwindcss-ls" ]
+language-servers = [ "tailwindcss-ls" ]
 
 [language.auto-pairs]
 '<' = '>'
@@ -30,5 +27,30 @@ file-types = ["erb", "html"]
 [[language]]
 name = "javascript"
 formatter = { command = 'npx', args = ["prettier", "--parser", "typescript", "--no-semi" ] }
-auto-format = true
-file-types = ["js", "jsx"]
+auto-format = false
+file-types = ["js", "jsx", "ts", "tsx"]
+
+[[language]]
+name = "c-sharp"
+scope = "source.csharp"
+injection-regex = "c-?sharp"
+file-types = ["cs", "csx", "cake"]
+roots = ["sln", "csproj"]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+indent = { tab-width = 4, unit = "\t" }
+language-servers = [ "omnisharp" ]
+
+[[language]]
+name = "swift"
+scope = "source.swift"
+injection-regex = "swift"
+file-types = ["swift", "swiftinterface"]
+roots = [ "Package.swift" ]
+comment-token = "//"
+block-comment-tokens = { start = "/*", end = "*/" }
+formatter = { command = "swift-format" }
+language-servers = ["sourcekit-lsp"]
+
+[language-server.sourcekit-lsp]
+command = "sourcekit-lsp"

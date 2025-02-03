@@ -1,6 +1,7 @@
 # theme = "horizon-dark"
 # theme = "rose_pine_moon"
 theme = "gruvbox_dark_hard"
+# theme = "jetbrains"
 
 [keys.normal]
 a = ["move_char_right", "insert_mode"]

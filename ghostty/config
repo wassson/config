@@ -5,16 +5,25 @@ background = 1E2021
 
 # rose-pine
 # background = 232137
-theme = rose-pine
+theme = rose-pine-moon
 
 # window
 adjust-cell-height = 36%
 # background-opacity = 0.96
 font-family = BerkeleyMono Nerd Font
 font-size = 13
+
+# MacOS
+macos-icon = custom-style
+macos-icon-ghost-color = ffffff
+macos-icon-screen-color = 1C2021
+macos-titlebar-proxy-icon = hidden
 # macos-titlebar-style = hidden
+
+# mouse
 mouse-scroll-multiplier = 2
 mouse-hide-while-typing = true
+
 shell-integration = zsh
 window-colorspace = "display-p3"
 window-padding-balance = true

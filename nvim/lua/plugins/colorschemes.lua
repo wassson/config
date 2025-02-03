@@ -6,7 +6,7 @@ return {
         variant = 'moon'
       })
 
-      vim.cmd.colorscheme("rose-pine")
+      -- vim.cmd.colorscheme("rose-pine")
     end
   },
   {
@@ -56,7 +56,7 @@ return {
       vim.g.gruvbox_material_statusline_style = "original"
       vim.g.gruvbox_material_cursor = "auto"
 
-      -- vim.cmd.colorscheme("gruvbox-material")
+      vim.cmd.colorscheme("gruvbox-material")
     end,
   },
 }

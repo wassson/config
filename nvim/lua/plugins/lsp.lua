@@ -9,6 +9,9 @@ return {
     { "hrsh7th/cmp-nvim-lsp" },
   },
   config = function()
+    local lspconfig = require('lspconfig')
+    lspconfig.sourcekit.setup {}
+
     require("mason").setup({
       ui = {
         border = "rounded",

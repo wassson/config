@@ -1,0 +1,11 @@
+name = "jetbrains"
+inherits = "jetbrains_dark"
+
+# Custom colors
+# --------------
+# class, module, namespace names
+namespace = "teal"
+type = "teal"
+
+[palette]
+teal = "#70AFBD"
