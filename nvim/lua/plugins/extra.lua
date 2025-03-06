@@ -134,19 +134,6 @@ return {
     },
   },
 
-  -- Lorem Ipsum generator for Neovim
-  {
-    "derektata/lorem.nvim",
-    enabled = false,
-    config = function()
-      local lorem = require("lorem")
-      lorem.setup({
-        sentenceLength = "mixedShort",
-        comma = 1,
-      })
-    end,
-  },
-
   -- Indent guide for Neovim
   {
     "lukas-reineke/indent-blankline.nvim",

@@ -4,8 +4,15 @@ inherits = "jetbrains_dark"
 # Custom colors
 # --------------
 # class, module, namespace names
-namespace = "teal"
-type = "teal"
+# namespace = "teal"
+# type = "teal"
+
+attribute = "yellow"
+tag = "teal"
+type = "yellow"
+function = "blue"
 
 [palette]
+blue = "#57A8F5"
 teal = "#70AFBD"
+yellow = "#FFC66D"

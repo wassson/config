@@ -24,11 +24,11 @@ language-servers = [ "tailwindcss-ls" ]
 "'" = "'"
 '"' = '"'
 
-[[language]]
-name = "javascript"
-formatter = { command = 'npx', args = ["prettier", "--parser", "typescript", "--no-semi" ] }
-auto-format = false
-file-types = ["js", "jsx", "ts", "tsx"]
+# [[language]]
+# name = "javascript"
+# formatter = { command = 'npx', args = ["prettier", "--parser", "typescript", "--no-semi" ] }
+# auto-format = false
+# file-types = ["js", "jsx", "ts", "tsx"]
 
 [[language]]
 name = "c-sharp"

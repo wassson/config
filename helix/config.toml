@@ -1,6 +1,7 @@
-# theme = "horizon-dark"
-# theme = "rose_pine_moon"
-theme = "gruvbox_dark_hard"
+theme = "wasson"
+# theme = "rose_pine"
+# theme = "gruvbox_dark_hard"
+# theme = "rpm"
 # theme = "jetbrains"
 
 [keys.normal]
@@ -23,3 +24,5 @@ cursorline = true
 [editor.cursor-shape]
 insert = "bar"
 
+[editor.gutters]
+layout = ["spacer", "line-numbers", "spacer", "diff", "spacer", "spacer"]

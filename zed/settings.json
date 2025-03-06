@@ -7,11 +7,17 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "icon_theme": "JetBrains New UI Icons (Dark)",
   "features": {
-    "inline_completion_provider": "supermaven"
+    "edit_prediction_provider": "supermaven"
   },
   "file_finder": {
     "modal_max_width": "large"
+  },
+  "file_scan_exclusions": ["**/build"],
+  "gutter": {
+    "code_actions": false,
+    "runnables": false
   },
   "preview_tabs": {
     "enable_preview_from_file_finder": true,
@@ -33,7 +39,7 @@
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "JetBrains New Dark",
+  "theme": "Gruvbox Dark Hard",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
