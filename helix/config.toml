@@ -1,6 +1,6 @@
-theme = "wasson"
+# theme = "wasson"
 # theme = "rose_pine"
-# theme = "gruvbox_dark_hard"
+theme = "gruvbox_dark_hard"
 # theme = "rpm"
 # theme = "jetbrains"
 
