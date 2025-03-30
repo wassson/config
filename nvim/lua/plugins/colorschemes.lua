@@ -24,26 +24,6 @@ return {
     end
   },
   {
-    "ellisonleao/gruvbox.nvim",
-    config = function()
-      require("gruvbox").setup({
-        terminal_colors = true,
-        italic = {
-          strings = false,
-          emphasis = false,
-          comments = true,
-          operators = false,
-          folds = true,
-        },
-        contrast = "hard",
-        palette_overrides = {
-        },
-      })
-      -- vim.cmd([[highlight @punctuation.bracket guifg=#ffffff]])
-      -- vim.cmd("colorscheme gruvbox")
-    end
-  },
-  {
     "sainnhe/gruvbox-material",
     enabled = true,
     priority = 1000,

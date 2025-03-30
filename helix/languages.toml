@@ -1,8 +1,8 @@
 [[language]]
 name = "ruby"
 formatter = { command = "bundle", args = [ "exec", "stree", "format" ]}
-language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }, { name = "solargraph" }]
-auto-format = false
+language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }]
+auto-format = true
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
 
 [language-server.ruby-lsp]
@@ -24,11 +24,11 @@ language-servers = [ "tailwindcss-ls" ]
 "'" = "'"
 '"' = '"'
 
-# [[language]]
-# name = "javascript"
-# formatter = { command = 'npx', args = ["prettier", "--parser", "typescript", "--no-semi" ] }
-# auto-format = false
-# file-types = ["js", "jsx", "ts", "tsx"]
+[[language]]
+name = "javascript"
+formatter = { command = "/Users/austin/.asdf/installs/nodejs/20.12.0/lib/node_modules/prettier/bin/prettier.cjs", args = ["--parser", "typescript" ] }
+auto-format = false
+file-types = ["js", "jsx"]
 
 [[language]]
 name = "c-sharp"
@@ -42,15 +42,22 @@ indent = { tab-width = 4, unit = "\t" }
 language-servers = [ "omnisharp" ]
 
 [[language]]
-name = "swift"
-scope = "source.swift"
-injection-regex = "swift"
-file-types = ["swift", "swiftinterface"]
-roots = [ "Package.swift" ]
-comment-token = "//"
-block-comment-tokens = { start = "/*", end = "*/" }
-formatter = { command = "swift-format" }
-language-servers = ["sourcekit-lsp"]
+name = "typescript"
+formatter = { command = '/Users/austin/.asdf/installs/nodejs/20.12.0/lib/node_modules/prettier/bin/prettier.cjs', args = ["--parser", "typescript"] }
+file-types=["ts", "tsx"]
+auto-format = true
 
-[language-server.sourcekit-lsp]
-command = "sourcekit-lsp"
+[[language]]
+name = "tsx"
+file-types = ["tsx"]
+formatter = { command = '/Users/austin/.asdf/installs/nodejs/20.12.0/lib/node_modules/prettier/bin/prettier.cjs', args = ["--stdin-filename", "file.tsx"] }
+language-servers = ["tailwindcss-ls", "emmet-ls"]
+auto-format = true
+
+[language-server.tailwindcss-ls]
+config = { userLanguages = { rust = "html", "*.rs" = "html", typescript = "html", "*.tsx" = "html" } }
+
+[language-server.emmet-ls]
+args = ["--stdio"]
+command="emmet-ls"
+

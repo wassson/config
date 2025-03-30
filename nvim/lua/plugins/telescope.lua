@@ -9,22 +9,18 @@ return {
       "nvim-tree/nvim-web-devicons",
       { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
       "nvim-telescope/telescope-ui-select.nvim",
-      "telescope-dap.nvim",
       "kkharji/sqlite.lua",
-      -- "nvim-telescope/telescope-frecency.nvim",
     },
     keys = {
-      -- f = { require("config.utils").telescope_git_or_file, "Find Files (Root)" },
-      -- map("<leader>o", require("telescope.builtin").buffers, "Buffers")
-
       {
-        "<leader>f", function() require("config.utils").telescope_git_or_file() end, desc = "Find Files (Root)",
+        "<leader>sf", function() require("config.utils").telescope_git_or_file() end, desc = "Find Files (Root)",
       },
       {
         "<leader>o", function() require("telescope.builtin").buffers() end, desc = "Buffers",
+
       },
       {
-        "<leader>sf",
+        "<leader>f",
         function()
           require("telescope.builtin").find_files()
         end,
@@ -323,10 +319,9 @@ return {
       telescope.load_extension("fzf")
       telescope.load_extension("ui-select")
       -- telescope.load_extension("refactoring")
-      telescope.load_extension("dap")
       -- telescope.load_extension("frecency")
       -- telescope.load_extension("notify")
-      telescope.load_extension("package_info")
+      -- telescope.load_extension("package_info")
     end,
   },
 }

@@ -39,7 +39,7 @@
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "Ayu Dark",
+  "theme": "Catbox",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font Mono",
   "buffer_font_family": "JetBrainsMono Nerd Font Mono",
@@ -49,7 +49,7 @@
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-5-sonnet-latest"
     },
     "version": "2",
     "button": true
@@ -142,7 +142,7 @@
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
-          "diagnostics": false
+          "diagnostics": true
         }
       }
     },

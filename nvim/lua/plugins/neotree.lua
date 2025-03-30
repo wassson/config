@@ -8,6 +8,7 @@ return {
   event = "VeryLazy",
   keys = {
     { "<leader>e", ":Neotree toggle float<CR>", silent = true, desc = "Float File Explorer" },
+    { "<leader>E", ":Neotree reveal<CR>", silent = true, desc = "Project Root Explorer" },
     { "<leader><Tab>", ":Neotree toggle left<CR>", silent = true, desc = "Left File Explorer" },
   },
   config = function()
@@ -71,7 +72,7 @@ return {
         winbar = true,
         sources = {
           { source = "filesystem", display_name = "   Files " },
-          { source = "buffers", display_name = "   Bufs " },
+          -- { source = "buffers", display_name = "   Bufs " },
           { source = "git_status", display_name = "   Git " },
         },
       },
