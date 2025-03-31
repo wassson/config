@@ -31,16 +31,21 @@ file-types = ["js", "jsx"]
 
 [[language]]
 name = "typescript"
-formatter = { command = '/Users/austin/.asdf/installs/nodejs/20.12.0/lib/node_modules/prettier/bin/prettier.cjs', args = ["--parser", "typescript"] }
+formatter = { command = 'prettier', args = ["--parser", "typescript"] }
 file-types=["ts", "tsx"]
 auto-format = true
 
 [[language]]
 name = "tsx"
 file-types = ["tsx"]
-formatter = { command = '/Users/austin/.asdf/installs/nodejs/20.12.0/lib/node_modules/prettier/bin/prettier.cjs', args = ["--parser", "typescript"] }
-language-servers = ["tailwindcss-ls", "emmet-ls"]
+formatter = { command = 'prettier', args = ["--parser", "babel-ts"] }
+language-servers = ["typescript-language-server", "tailwindcss-ls", "emmet-ls"]
+block-comment-tokens = [{ start = "{/*", end = "*/}" }]
 auto-format = true
+
+[language-server.typescript-language-server]
+command = "typescript-language-server"
+args = ["--stdio"]
 
 [language-server.tailwindcss-ls]
 config = { userLanguages = { rust = "html", "*.rs" = "html", typescript = "html", "*.tsx" = "html" } }

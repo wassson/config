@@ -8,6 +8,8 @@ theme = "gruvbox_dark_hard"
 a = ["move_char_right", "insert_mode"]
 "left" = ":buffer-previous"
 "right" = ":buffer-next"
+C-h = ":buffer-previous"
+C-l = ":buffer-next"
 "S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 "S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "S-h" = ["goto_line_start"]
@@ -36,7 +38,7 @@ a = ["move_char_right", "insert_mode"]
 
 [keys.insert]
 j = { k = "normal_mode" }
-C-h = "signature_help"
+# C-h = "signature_help"
 
 [keys.select]
 "S-up" = ["goto_line_end","extend_line_below",  "delete_selection", "move_line_up", "paste_before", "select_mode"]
