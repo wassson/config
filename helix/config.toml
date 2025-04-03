@@ -4,6 +4,9 @@ theme = "gruvbox_dark_hard"
 # theme = "rpm"
 # theme = "jetbrains"
 
+[editor.gutters]
+layout = ["spacer", "line-numbers", "spacer", "diff", "spacer", "spacer"]
+
 [keys.normal]
 a = ["move_char_right", "insert_mode"]
 "left" = ":buffer-previous"
@@ -17,44 +20,24 @@ C-l = ":buffer-next"
 "S-l" = ["goto_line_end"]
 
 [keys.normal.space]
-# e = [
-#   ":sh rm -f /tmp/unique-file-h21a434",
-#   ":insert-output yazi '%{buffer_name}' --chooser-file=/tmp/unique-file-h21a434",
-#   ":insert-output echo \"x1b[?1049h\" > /dev/tty",
-#   ":open %sh{cat /tmp/unique-file-h21a434}",
-#   ":redraw",
-#   ":set mouse false",
-#   ":set mouse true",
-# ]
-# E = [
-#   ":sh rm -f /tmp/unique-file-u41ae14",
-#   ":insert-output yazi '%{workspace_directory}' --chooser-file=/tmp/unique-file-u41ae14",
-#   ":insert-output echo \"x1b[?1049h\" > /dev/tty",
-#   ":open %sh{cat /tmp/unique-file-u41ae14}",
-#   ":redraw",
-#   ":set mouse false",
-#   ":set mouse true",
-# ]
+# m = ":write"
 
 [keys.insert]
 j = { k = "normal_mode" }
-# C-h = "signature_help"
+C-h = "signature_help"
 
 [keys.select]
 "S-up" = ["goto_line_end","extend_line_below",  "delete_selection", "move_line_up", "paste_before", "select_mode"]
 "S-down" = ["goto_line_end","extend_line_below",  "delete_selection", "paste_after", "select_mode" ]
 
 [editor]
-auto-info = false
+# auto-info = false
 bufferline = "always"
 cursorline = true
 mouse = true
 
 [editor.cursor-shape]
 insert = "bar"
-
-[editor.gutters]
-layout = ["spacer", "line-numbers", "spacer", "diff", "spacer", "spacer"]
 
 [editor.lsp]
 auto-signature-help = false
