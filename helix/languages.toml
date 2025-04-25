@@ -31,20 +31,20 @@ file-types = ["js", "jsx"]
 
 [[language]]
 name = "typescript"
-formatter = { command = 'prettier', args = ["--parser", "typescript"] }
+formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = ["--parser", "typescript"] }
 file-types=["ts", "tsx"]
 auto-format = true
 
 [[language]]
 name = "tsx"
 file-types = ["tsx"]
-formatter = { command = 'prettier', args = ["--parser", "babel-ts"] }
+formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = ["--parser", "babel-ts"] }
 language-servers = ["typescript-language-server", "tailwindcss-ls", "emmet-ls"]
 block-comment-tokens = [{ start = "{/*", end = "*/}" }]
 auto-format = true
 
 [language-server.typescript-language-server]
-command = "typescript-language-server"
+command = "/Users/austinwasson/.bun/bin/typescript-language-server"
 args = ["--stdio"]
 
 [language-server.tailwindcss-ls]

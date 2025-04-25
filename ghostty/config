@@ -1,5 +1,5 @@
 # themes
-# theme = GruvboxDark
+theme = GruvboxDark
 background = 1C2021
 # theme = GruvboxDarkHard
 
@@ -13,8 +13,8 @@ background = 1C2021
 adjust-cell-height = 13%
 # adjust-cell-width = 1%
 # background-opacity = 0.96
-font-family = BerkeleyMono Nerd Font
-font-size = 13
+font-family = MonoLisa Regular
+font-size = 12.5
 gtk-tabs-location = bottom
 
 # MacOS

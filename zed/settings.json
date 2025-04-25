@@ -7,9 +7,9 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "icon_theme": "JetBrains New UI Icons (Dark)",
+  "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
-    "edit_prediction_provider": "supermaven"
+    "edit_prediction_provider": "zed"
   },
   "file_finder": {
     "modal_max_width": "large"
@@ -18,6 +18,12 @@
   "gutter": {
     "code_actions": false,
     "runnables": false
+  },
+  "indent_guides": {
+    "enabled": false,
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware",
+    "line_width": 1
   },
   "preview_tabs": {
     "enable_preview_from_file_finder": true,
@@ -39,17 +45,17 @@
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "Ayu Dark",
+  "theme": "Catbox",
   "ui_font_size": 14,
-  "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_family": "MonoLisa Regular",
+  "buffer_font_family": "MonoLisa Regular",
   "buffer_font_size": 13,
   "tab_size": 2,
   "cursor_blink": false,
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-latest"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2",
     "button": true
@@ -60,7 +66,7 @@
     "enabled": false
   },
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "notification_panel": {
     "button": false
@@ -69,9 +75,6 @@
     "inline_blame": {
       "enabled": false
     }
-  },
-  "indent_guides": {
-    "enabled": false
   },
   "languages": {
     "CSharp": {
@@ -100,10 +103,10 @@
         "!solargraph",
         "tailwind-language-server"
       ],
-      "format_on_save": "off",
+      "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "./bin/rubocop",
+          "command": "rubocop",
           "arguments": [
             "--fail-level",
             "error",

@@ -31,7 +31,6 @@ C-h = "signature_help"
 "S-down" = ["goto_line_end","extend_line_below",  "delete_selection", "paste_after", "select_mode" ]
 
 [editor]
-# auto-info = false
 bufferline = "always"
 cursorline = true
 mouse = true
@@ -42,3 +41,7 @@ insert = "bar"
 [editor.lsp]
 auto-signature-help = false
 display-messages = true
+
+[editor.statusline]
+diagnostics = ["error", "hint", "warning"]
+workspace-diagnostics = ["warning", "hint", "error"]
