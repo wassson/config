@@ -7,7 +7,31 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
-  "vim_mode": true,
+  "icon_theme": "Colored Zed Icons Theme Dark",
+  "features": {
+    "edit_prediction_provider": "zed"
+  },
+  "file_finder": {
+    "modal_max_width": "large"
+  },
+  "file_scan_exclusions": ["**/build"],
+  "gutter": {
+    "code_actions": false,
+    "runnables": false
+  },
+  "indent_guides": {
+    "enabled": false,
+    "background_coloring": "indent_aware",
+    "coloring": "indent_aware",
+    "line_width": 1
+  },
+  "preview_tabs": {
+    "enable_preview_from_file_finder": true,
+    "enable_preview_from_code_navigation": true
+  },
+  "project_panel": {
+    "dock": "right"
+  },
   "tab_bar": {
     "show_nav_history_buttons": false,
     "show": true
@@ -20,20 +44,18 @@
     "title": true,
     "quick_actions": false
   },
-  "project_panel": {
-    "dock": "right"
-  },
-  "theme": "Rosé Pine Moon",
+  "vim_mode": true,
+  "theme": "Catbox",
   "ui_font_size": 14,
-  "ui_font_family": "JetBrainsMono Nerd Font Mono",
-  "buffer_font_family": "JetBrainsMono Nerd Font Mono",
+  "ui_font_family": "MonoLisa Regular",
+  "buffer_font_family": "MonoLisa Regular",
   "buffer_font_size": 13,
   "tab_size": 2,
   "cursor_blink": false,
   "assistant": {
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-5-sonnet-20240620"
+      "model": "claude-3-7-sonnet-latest"
     },
     "version": "2",
     "button": true
@@ -44,7 +66,7 @@
     "enabled": false
   },
   "chat_panel": {
-    "button": false
+    "button": "never"
   },
   "notification_panel": {
     "button": false
@@ -54,10 +76,10 @@
       "enabled": false
     }
   },
-  "indent_guides": {
-    "enabled": false
-  },
   "languages": {
+    "CSharp": {
+      "tab_size": 4
+    },
     "C++": {
       "language_servers": ["clangd"],
       "format_on_save": "on"
@@ -68,6 +90,9 @@
       "format_on_save": "on"
     },
     "JavaScript": {
+      "format_on_save": "off"
+    },
+    "JSON": {
       "format_on_save": "off"
     },
     "Ruby": {
@@ -81,7 +106,7 @@
       "format_on_save": "on",
       "formatter": {
         "external": {
-          "command": "./bin/rubocop",
+          "command": "rubocop",
           "arguments": [
             "--fail-level",
             "error",
@@ -93,12 +118,28 @@
           ]
         }
       }
+    },
+    "Rust": {
+      "tab_size": 4
+    },
+    "Swift": {
+      "enable_language_server": true,
+      "language_servers": ["sourcekit-lsp"],
+      "formatter": "language_server",
+      "format_on_save": "on",
+      "tab_size": 4
     }
   },
   "lsp": {
     "gdscript": {
       "binary": {
         "arguments": ["127.0.0.1", "6005"]
+      }
+    },
+    "omnisharp": {
+      "binary": {
+        "path": "/opt/homebrew/bin/dotnet",
+        "arguments": ["optional", "additional", "args", "-lsp"]
       }
     },
     "ruby-lsp": {

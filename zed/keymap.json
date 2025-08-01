@@ -15,7 +15,7 @@
       "cmd-shift-up": "editor::MoveLineUp",
       "cmd-shift-down": "editor::MoveLineDown",
       "cmd-shift-n": "pane::ActivateNextItem",
-      "cmd-shift-p": "pane::ActivatePrevItem"
+      "cmd-shift-p": "pane::ActivatePreviousItem"
     }
   },
   {
@@ -29,7 +29,13 @@
     "bindings": {
       // <space> leader key stuff
       "space f": "file_finder::Toggle",
-      "space e": "project_panel::ToggleFocus"
+      "space e": "project_panel::ToggleFocus",
+      //control
+      "ctrl-h": "pane::ActivatePreviousItem",
+      "ctrl-l": "pane::ActivateNextItem",
+      // shift
+      "shift-h": "editor::MoveToBeginningOfLine",
+      "shift-l": "editor::MoveToEndOfLine"
     }
   },
   {
@@ -37,7 +43,7 @@
     "bindings": {
       "space w": "workspace::Save",
       "right": "pane::ActivateNextItem",
-      "left": "pane::ActivatePrevItem"
+      "left": "pane::ActivatePreviousItem"
     }
   },
   {

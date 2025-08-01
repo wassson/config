@@ -1,0 +1,40 @@
+# themes
+theme = GruvboxDark
+background = 1C2021
+# theme = GruvboxDarkHard
+
+# rose-pine
+# theme = rose-pine
+# background = 232137
+# theme = rose-pine-moon
+# background = 3A3554
+
+# window
+adjust-cell-height = 13%
+# adjust-cell-width = 1%
+# background-opacity = 0.96
+font-family = MonoLisa Regular
+font-size = 12.5
+gtk-tabs-location = bottom
+
+# MacOS
+macos-icon = custom-style
+macos-icon-ghost-color = ffffff
+macos-icon-screen-color = 1C2021
+macos-titlebar-proxy-icon = hidden
+macos-titlebar-style = tabs
+
+# mouse
+mouse-scroll-multiplier = 2
+mouse-hide-while-typing = true
+
+shell-integration = zsh
+window-colorspace = "display-p3"
+# window-decoration = false
+window-padding-balance = true
+window-save-state = always
+
+# keybinds
+keybind = super+shift+o=next_tab
+keybind = super+shift+u=previous_tab
+

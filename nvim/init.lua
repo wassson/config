@@ -5,3 +5,5 @@ require("config.options")
 require("config.autocmds")
 require("config.abbreviations")
 require("config.lazy")
+
+vim.lsp.enable({ 'luals', 'ruby-lsp' })
