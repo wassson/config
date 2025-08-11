@@ -3,6 +3,7 @@ configstore
 github-copilot/hosts.json
 nvim/pack/github/start/copilot.vim/
 yarn/global
-raycast/**/*
+raycast/extensions/
 zed/**/*
 gcloud/
+fonts/Iosevka*/
