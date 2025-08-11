@@ -1,7 +1,12 @@
 [[language]]
 name = "ruby"
-formatter = { command = "bundle", args = [ "exec", "stree", "format" ]}
-language-servers = [{ name = "ruby-lsp", except-features = ["diagnostics"] }, { name = "rubocop", only-features = ["diagnostics"] }]
+formatter = { command = "bundle", args = ["exec", "stree", "format"] }
+language-servers = [
+  { name = "ruby-lsp" },
+  { name = "rubocop", only-features = [
+    "diagnostics",
+  ] },
+]
 auto-format = true
 auto-pairs = { "(" = ")", "[" = "]", "{" = "}", "|" = "|" }
 
@@ -16,7 +21,7 @@ args = ["exec", "rubocop", "--lsp"]
 [[language]]
 name = "erb"
 file-types = ["erb", "html"]
-language-servers = [ "tailwindcss-ls" ]
+language-servers = ["tailwindcss-ls"]
 
 [language.auto-pairs]
 '<' = '>'
@@ -25,20 +30,47 @@ language-servers = [ "tailwindcss-ls" ]
 '"' = '"'
 
 [[language]]
+name = "elixir"
+scope = "source.elixir"
+file-types = ["ex", "exs"]
+auto-format = true
+comment-token = "#"
+indent = { tab-width = 2, unit = " " }
+injection-regex = "(elixir|ex)"
+shebangs = ["elixir"]
+roots = ["mix.exs", "mix.lock"]
+language-servers = ["elixir-ls"]
+
+[[language]]
+name = "go"
+file-types = ["go"]
+language-servers = ["gopls"]
+auto-format = true
+
+[language-server.gopls]
+command = "gopls"
+
+[[language]]
 name = "javascript"
 auto-format = false
 file-types = ["js", "jsx"]
 
 [[language]]
 name = "typescript"
-formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = ["--parser", "typescript"] }
-file-types=["ts", "tsx"]
+formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = [
+  "--parser",
+  "typescript",
+] }
+file-types = ["ts", "tsx"]
 auto-format = true
 
 [[language]]
 name = "tsx"
 file-types = ["tsx"]
-formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = ["--parser", "babel-ts"] }
+formatter = { command = '/Users/austinwasson/.bun/bin/prettier', args = [
+  "--parser",
+  "babel-ts",
+] }
 language-servers = ["typescript-language-server", "tailwindcss-ls", "emmet-ls"]
 block-comment-tokens = [{ start = "{/*", end = "*/}" }]
 auto-format = true
@@ -52,5 +84,62 @@ config = { userLanguages = { rust = "html", "*.rs" = "html", typescript = "html"
 
 [language-server.emmet-ls]
 args = ["--stdio"]
-command="emmet-ls"
+command = "emmet-ls"
 
+[[language]]
+name = "markdown"
+language-servers = ["mdpls"]
+
+[language-server.mdpls]
+command = "mdpls"
+config = { markdown.preview.auto = true }
+
+[[language]]
+name = "svelte"
+scope = "source.svelte"
+file-types = ["svelte"]
+auto-format = true
+comment-token = "//"
+indent = { tab-width = 2, unit = " " }
+injection-regex = "svelte"
+language-servers = ["svelteserver"]
+
+[language-server.svelteserver]
+command = "svelteserver"
+args = ["--stdio"]
+
+[[language]]
+name = "rust"
+scope = "source.rust"
+file-types = ["rs"]
+roots = ["Cargo.toml", "Cargo.lock"]
+auto-format = true
+language-servers = ["rust-analyzer"]
+
+[language-server.rust-analyzer]
+command = "rust-analyzer"
+
+[language-server.rust-analyzer.config]
+checkOnSave.command = "clippy"
+cargo.buildScripts.enable = true
+procMacro.enable = true
+rust-analyzer.cachePriming.enable = false
+rust-analyzer.diagnostics.experimental.enable = false
+
+[[language]]
+name = "zig"
+scope = "source.zig"
+file-types = ["zig", "zon"]
+roots = ["build.zig", "build.zig.zon"]
+auto-format = true
+language-servers = ["zls"]
+
+[language-server.zls]
+command = "zls"
+# config = { 
+#   zig_exe_path = "/Users/austinwasson/.local/share/mise/installs/zig/0.14.1/zig",
+#   enable_snippets = true,
+#   enable_argument_placeholders = true,
+#   enable_build_on_save = true,
+#   build_on_save_step = "check"
+# }

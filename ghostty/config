@@ -1,20 +1,34 @@
+#shell-integration = fish
+# command = /usr/local/bin/fish --login --interactive
+
 # themes
-theme = GruvboxDark
-background = 1C2021
 # theme = GruvboxDarkHard
+background = 1C2021
+
+# terafox
+#theme = terafox
+#background = 0F1C1E
 
 # rose-pine
-# theme = rose-pine
+theme = rose-pine
 # background = 232137
 # theme = rose-pine-moon
-# background = 3A3554
+# background = 232138
+# theme = duskfox
+
+#theme = catppuccin-mocha
+#theme = GitHub-Dark-Colorblind
 
 # window
-adjust-cell-height = 13%
-# adjust-cell-width = 1%
-# background-opacity = 0.96
-font-family = MonoLisa Regular
-font-size = 12.5
+adjust-cell-height = 16%
+adjust-cell-width = 4%
+# background-opacity = 0.99
+font-family = JetBrainsMono NFM Bold
+#font-family = "Zed Mono Regular"
+font-size = 13
+font-thicken = true
+#font-thicken-strength = 95
+
 gtk-tabs-location = bottom
 
 # MacOS
@@ -27,6 +41,9 @@ macos-titlebar-style = tabs
 # mouse
 mouse-scroll-multiplier = 2
 mouse-hide-while-typing = true
+
+# cursor
+cursor-style = bar
 
 shell-integration = zsh
 window-colorspace = "display-p3"

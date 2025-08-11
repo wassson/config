@@ -1,0 +1,7 @@
+{
+  "zig_exe_path": "/Users/austinwasson/.local/share/mise/installs/zig/0.14.1/zig",
+  "enable_snippets": true,
+  "enable_argument_placeholders": true,
+  "enable_build_on_save": true,
+  "build_on_save_step": "check"
+}

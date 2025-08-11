@@ -1,0 +1,18 @@
+2025-07-24 16:10:05,534 DEBUG    root            Loaded Command Group: ['gcloud', 'init']
+2025-07-24 16:10:05,535 DEBUG    root            Running [gcloud.init] with arguments: []
+2025-07-24 16:10:05,535 INFO     ___FILE_ONLY___ Welcome! This command will take you through the configuration of gcloud.
+
+
+2025-07-24 16:10:05,535 INFO     ___FILE_ONLY___ Settings from your current configuration [default] are:
+
+2025-07-24 16:10:05,536 INFO     ___FILE_ONLY___ core:
+  account: austin@serviceup.com
+  disable_usage_reporting: 'True'
+
+2025-07-24 16:10:05,536 INFO     ___FILE_ONLY___ 
+
+2025-07-24 16:10:13,511 INFO     ___FILE_ONLY___ 
+
+Command killed by keyboard interrupt
+
+

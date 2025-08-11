@@ -68,11 +68,7 @@ vim.keymap.set("n", "g#", "g#zz", opts)
 -- map ; to resume last search
 -- map("n", ";", "<cmd>Telescope resume<cr>", opts)
 
--- search current buffer
-vim.keymap.set("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
-
--- search modified files
-vim.keymap.set("n", "<Leader>m", ":Telescope git_status<CR>", opts)
+-- These telescope keymaps are now handled in plugins/telescope.lua
 
 -- Split line with X
 vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })

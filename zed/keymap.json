@@ -3,7 +3,7 @@
     "context": "Workspace",
     "bindings": {
       "cmd-1": "workspace::ToggleRightDock",
-      "shift-cmd-o": "projects::OpenRecent",
+      "ctrl-o": "projects::OpenRecent",
       "cmd-alt-o": "projects::OpenRecent"
     }
   },
@@ -11,7 +11,7 @@
     "context": "Editor",
     "bindings": {
       "cmd-click": "editor::GoToDefinition",
-      "shift-cmd-o": "file_finder::Toggle",
+      "space f": "file_finder::Toggle",
       "cmd-shift-up": "editor::MoveLineUp",
       "cmd-shift-down": "editor::MoveLineDown",
       "cmd-shift-n": "pane::ActivateNextItem",
@@ -57,6 +57,57 @@
     "bindings": {
       "ctrl-f": "editor::ConfirmCompletion",
       "cmd-l": "editor::MoveToEnd"
+    }
+  },
+  {
+    "context": "RateCompletionModal > Editor",
+    "bindings": {
+      "j k": "zeta::FocusCompletions"
+    }
+  },
+  {
+    "bindings": {
+      "ctrl-d": "diagnostics::ToggleWarnings"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-l": "pane::ActivateNextItem"
+    }
+  },
+  {
+    "context": "Pane",
+    "bindings": {
+      "ctrl-h": "pane::ActivatePreviousItem"
+    }
+  },
+  {
+    "context": "(VimControl && !menu)",
+    "bindings": {
+      "g space": "editor::OpenExcerpts"
+    }
+  },
+  {
+    "bindings": {
+      "alt-right": "panel::NextPanelTab"
+    }
+  },
+  {
+    "bindings": {
+      "cmd-shift-l": "repl::ClearOutputs"
+    }
+  },
+  {
+    "context": "Terminal",
+    "bindings": {
+      "cmd-shift-l": "terminal::Clear",
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "ctrl-shift-~": "workspace::NewTerminal"
     }
   }
 ]

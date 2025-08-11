@@ -1,8 +1,13 @@
 # theme = "wasson"
 # theme = "rose_pine"
-theme = "gruvbox_dark_hard"
+# theme = "rose_pine_moon"
+theme = "a_gruvbox"
+# theme = "gruvbox_dark_hard"
 # theme = "rpm"
 # theme = "jetbrains"
+# theme = "kaolin-dark"
+# theme = "duskfox"
+# theme = "terafox"
 
 [editor.gutters]
 layout = ["spacer", "line-numbers", "spacer", "diff", "spacer", "spacer"]
@@ -16,8 +21,8 @@ C-l = ":buffer-next"
 "S-up" = ["extend_to_line_bounds", "delete_selection", "move_line_up", "paste_before"]
 "S-down" = ["extend_to_line_bounds", "delete_selection", "paste_after"]
 "S-h" = ["goto_line_start"]
-"S-k" = ":buffer-close"
 "S-l" = ["goto_line_end"]
+"S-b" = ":buffer-close"
 
 [keys.normal.space]
 # m = ":write"
@@ -34,6 +39,11 @@ C-h = "signature_help"
 bufferline = "always"
 cursorline = true
 mouse = true
+
+[editor.auto-save]
+after-delay.enable = true
+after-delay.timeout = 1000
+
 
 [editor.cursor-shape]
 insert = "bar"

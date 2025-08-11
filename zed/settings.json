@@ -7,6 +7,15 @@
 // custom settings, run the `open default settings` command
 // from the command palette or from `Zed` application menu.
 {
+  "edit_predictions": {
+    "mode": "eager",
+    "copilot": {
+      "proxy": null,
+      "proxy_no_verify": null,
+      "enterprise_uri": null
+    },
+    "enabled_in_text_threads": false
+  },
   "icon_theme": "Colored Zed Icons Theme Dark",
   "features": {
     "edit_prediction_provider": "zed"
@@ -16,7 +25,6 @@
   },
   "file_scan_exclusions": ["**/build"],
   "gutter": {
-    "code_actions": false,
     "runnables": false
   },
   "indent_guides": {
@@ -39,31 +47,32 @@
   "tabs": {
     "file_icons": false
   },
+  "terminal": {
+    "dock": "left"
+  },
   "toolbar": {
     "breadcrumbs": false,
-    "title": true,
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "Catbox",
+  "theme": "Wasson RP",
   "ui_font_size": 14,
-  "ui_font_family": "MonoLisa Regular",
-  "buffer_font_family": "MonoLisa Regular",
-  "buffer_font_size": 13,
+  "ui_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_family": "JetBrainsMono Nerd Font",
+  "buffer_font_size": 13.5,
   "tab_size": 2,
   "cursor_blink": false,
-  "assistant": {
+  "agent": {
+    "always_allow_tool_actions": true,
     "default_model": {
       "provider": "zed.dev",
-      "model": "claude-3-7-sonnet-latest"
+      "model": "claude-sonnet-4"
     },
-    "version": "2",
     "button": true
   },
   "collaboration_panel": {
     "button": false,
-    "dock": "right",
-    "enabled": false
+    "dock": "right"
   },
   "chat_panel": {
     "button": "never"
@@ -77,71 +86,20 @@
     }
   },
   "languages": {
-    "CSharp": {
-      "tab_size": 4
-    },
-    "C++": {
-      "language_servers": ["clangd"],
-      "format_on_save": "on"
-    },
-    "GDScript": {
-      "tab_size": 2,
-      "hard_tabs": true,
-      "format_on_save": "on"
-    },
     "JavaScript": {
       "format_on_save": "off"
     },
     "JSON": {
       "format_on_save": "off"
     },
-    "Ruby": {
-      "tab_size": 2,
-      "enable_language_server": true,
-      "language_servers": [
-        "ruby-lsp",
-        "!solargraph",
-        "tailwind-language-server"
-      ],
-      "format_on_save": "on",
-      "formatter": {
-        "external": {
-          "command": "rubocop",
-          "arguments": [
-            "--fail-level",
-            "error",
-            "--auto-correct",
-            "--stdin",
-            "{buffer_path}",
-            "--stderr",
-            "--server"
-          ]
-        }
-      }
-    },
     "Rust": {
       "tab_size": 4
     },
-    "Swift": {
-      "enable_language_server": true,
-      "language_servers": ["sourcekit-lsp"],
-      "formatter": "language_server",
-      "format_on_save": "on",
+    "Zig": {
       "tab_size": 4
     }
   },
   "lsp": {
-    "gdscript": {
-      "binary": {
-        "arguments": ["127.0.0.1", "6005"]
-      }
-    },
-    "omnisharp": {
-      "binary": {
-        "path": "/opt/homebrew/bin/dotnet",
-        "arguments": ["optional", "additional", "args", "-lsp"]
-      }
-    },
     "ruby-lsp": {
       "initialization_options": {
         "enabledFeatures": {
@@ -159,13 +117,55 @@
           "classRegex": ["\\bclass:\\s*['\"]([^'\"]*)['\"]"]
         }
       }
-    }
-  },
-  "language_overrides": {
-    "JavaScript": {
-      "external": {
-        "command": "prettier",
-        "arguments": ["--stdin-filepath", "{buffer_path}"]
+    },
+    "rust-analyzer": {
+      "initialization_options": {
+        "rust": {
+          "analyzerTargetDir": true
+        },
+        "numThreads": 4,
+        "cachePriming": {
+          "enable": false
+        },
+        "checkOnSave": {
+          "enable": true,
+          "command": "check",
+          "allTargets": false
+        },
+        "cargo": {
+          "allFeatures": false,
+          "features": []
+        },
+        "files": {
+          "excludeDirs": [
+            "target",
+            "node_modules",
+            ".git",
+            "dist",
+            "build",
+            ".cargo"
+          ]
+        },
+        "diagnostics": {
+          "disabled": ["unresolved-proc-macro"]
+        },
+        "inlayHints": {
+          "chainingHints": {
+            "enable": false
+          },
+          "parameterHints": {
+            "enable": false
+          },
+          "typeHints": {
+            "enable": false
+          }
+        }
+      }
+    },
+    "zls": {
+      "initialization_options": {
+        "zig_exe_path": "/Users/austinwasson/tools/zig-nightly/zig",
+        "zig_lib_path": "/Users/austinwasson/tools/zig-nightly/lib"
       }
     }
   }

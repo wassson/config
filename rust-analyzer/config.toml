@@ -1,0 +1,40 @@
+# rust-analyzer configuration to improve performance
+
+# Limit the number of threads for parallel operations
+numThreads = 4
+
+# Reduce memory usage by limiting cargo features
+cargo.allFeatures = false
+cargo.features = []
+
+# Disable some heavy features
+checkOnSave.enable = true
+checkOnSave.command = "check"
+checkOnSave.allTargets = false
+
+# Limit the number of projects loaded
+linkedProjects = []
+
+# Cache settings
+cache.warmup = false
+primeCaches.enable = false
+
+# Reduce indexing scope
+files.excludeDirs = [
+    "target",
+    "node_modules",
+    ".git",
+    "dist",
+    "build",
+    ".cargo"
+]
+
+# Diagnostics settings
+diagnostics.disabled = [
+    "unresolved-proc-macro"
+]
+
+# Limit inlay hints to reduce processing
+inlayHints.chainingHints.enable = false
+inlayHints.parameterHints.enable = false
+inlayHints.typeHints.enable = false

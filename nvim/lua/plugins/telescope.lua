@@ -1,327 +1,135 @@
 return {
   {
     "nvim-telescope/telescope.nvim",
-    cmd = "Telescope",
-    version = false,
-    lazy = true,
+    tag = "0.1.6",
     dependencies = {
       "nvim-lua/plenary.nvim",
-      "nvim-tree/nvim-web-devicons",
-      { "nvim-telescope/telescope-fzf-native.nvim", build = "make" },
-      "nvim-telescope/telescope-ui-select.nvim",
-      "kkharji/sqlite.lua",
-    },
-    keys = {
       {
-        "<leader>sf", function() require("config.utils").telescope_git_or_file() end, desc = "Find Files (Root)",
-      },
-      {
-        "<leader>o", function() require("telescope.builtin").buffers() end, desc = "Buffers",
-
-      },
-      {
-        "<leader>f",
-        function()
-          require("telescope.builtin").find_files()
+        "nvim-telescope/telescope-fzf-native.nvim",
+        build = "make",
+        cond = function()
+          return vim.fn.executable "make" == 1
         end,
-        desc = "Find File (CWD)",
-      },
-      {
-        "<leader>sg",
-        function()
-          require("telescope.builtin").git_files()
-        end,
-        desc = "Search Git Files",
-      },
-      {
-        "<leader>sh",
-        function()
-          require("telescope.builtin").help_tags()
-        end,
-        desc = "Find Help",
-      },
-      {
-        "<leader>sH",
-        function()
-          require("telescope.builtin").highlights()
-        end,
-        desc = "Find highlight groups",
-      },
-      {
-        "<leader>sM",
-        function()
-          require("telescope.builtin").man_pages()
-        end,
-        desc = "Map Pages",
-      },
-      {
-        "<leader>so",
-        function()
-          require("telescope.builtin").oldfiles()
-        end,
-        desc = "Open Recent File",
-      },
-      {
-        "<leader>sR",
-        function()
-          require("telescope.builtin").registers()
-        end,
-        desc = "Registers",
-      },
-      {
-        "<leader>st",
-        function()
-          require("telescope.builtin").live_grep()
-        end,
-        desc = "Live Grep",
-      },
-      {
-        "<leader>sT",
-        function()
-          require("telescope.builtin").grep_string()
-        end,
-        desc = "Grep String",
-      },
-      {
-        "<leader>sk",
-        function()
-          require("telescope.builtin").keymaps()
-        end,
-        desc = "Keymaps",
-      },
-      {
-        "<leader>sC",
-        function()
-          require("telescope.builtin").commands()
-        end,
-        desc = "Commands",
-      },
-      {
-        "<leader>sl",
-        function()
-          require("telescope.builtin").resume()
-        end,
-        desc = "Resume last search",
-      },
-      {
-        "<leader>sc",
-        function()
-          require("telescope.builtin").git_commits()
-        end,
-        desc = "Git commits",
-      },
-      {
-        "<leader>sB",
-        function()
-          require("telescope.builtin").git_branches()
-        end,
-        desc = "Git branches",
-      },
-      {
-        "<leader>sm",
-        function()
-          require("telescope.builtin").git_status()
-        end,
-        desc = "Git status",
-      },
-      {
-        "<leader>sS",
-        function()
-          require("telescope.builtin").git_stash()
-        end,
-        desc = "Git stash",
-      },
-      -- {
-      --   "<leader>se",
-      --   function()
-      --     require("telescope.builtin").frecency()
-      --   end,
-      --   desc = "Frecency",
-      -- },
-      {
-        "<leader>sb",
-        function()
-          require("telescope.builtin").buffers()
-        end,
-        desc = "Buffers",
       },
     },
     config = function()
       local telescope = require("telescope")
       local actions = require("telescope.actions")
-      -- local trouble = require("trouble.sources.telescope")
-      local icons = require("config.icons")
-
-      vim.api.nvim_create_autocmd("FileType", {
-        pattern = "TelescopeResults",
-        callback = function(ctx)
-          vim.api.nvim_buf_call(ctx.buf, function()
-            vim.fn.matchadd("TelescopeParent", "\t\t.*$")
-            vim.api.nvim_set_hl(0, "TelescopeParent", { link = "Comment" })
-          end)
-        end,
-      })
-
-      -- local function formattedName(_, path)
-      --   local tail = vim.fs.basename(path)
-      --   local parent = vim.fs.dirname(path)
-      --   if parent == "." then
-      --     return tail
-      --   end
-      --   return string.format("%s\t\t%s", tail, parent)
-      -- end
 
       telescope.setup({
-        file_ignore_patterns = { "%.git/." },
-        -- borderchars = { "█", " ", "▀", "█", "█", " ", " ", "▀" },
         defaults = {
-          mappings = {
-            i = {
-              ["<esc>"] = actions.close,
-              -- ["<C-t>"] = trouble.open,
-            },
-
-            -- n = { ["<C-t>"] = trouble.open },
-          },
-          -- path_display = formattedName,
-          path_display = {
-            "filename_first",
-          },
-          previewer = false,
-          prompt_prefix = " " .. icons.ui.Telescope .. " ",
-          selection_caret = icons.ui.BoldArrowRight .. " ",
-          file_ignore_patterns = { "node_modules", "package-lock.json" },
-          initial_mode = "insert",
-          select_strategy = "reset",
+          path_display = { "truncate" },
           sorting_strategy = "ascending",
-          color_devicons = true,
-          set_env = { ["COLORTERM"] = "truecolor" }, -- default = nil,
           layout_config = {
-            prompt_position = "top",
+            horizontal = {
+              prompt_position = "top",
+              preview_width = 0.55,
+              results_width = 0.8,
+            },
+            vertical = {
+              mirror = false,
+            },
+            width = 0.87,
+            height = 0.80,
             preview_cutoff = 120,
           },
-          vimgrep_arguments = {
-            "rg",
-            "--color=never",
-            "--no-heading",
-            "--with-filename",
-            "--line-number",
-            "--column",
-            "--smart-case",
-            "--hidden",
-            "--glob=!.git/",
+          mappings = {
+            i = {
+              ["<C-n>"] = actions.cycle_history_next,
+              ["<C-p>"] = actions.cycle_history_prev,
+              ["<C-j>"] = actions.move_selection_next,
+              ["<C-k>"] = actions.move_selection_previous,
+              ["<C-c>"] = actions.close,
+              ["<Down>"] = actions.move_selection_next,
+              ["<Up>"] = actions.move_selection_previous,
+              ["<CR>"] = actions.select_default,
+              ["<C-x>"] = actions.select_horizontal,
+              ["<C-v>"] = actions.select_vertical,
+              ["<C-t>"] = actions.select_tab,
+              ["<C-u>"] = actions.preview_scrolling_up,
+              ["<C-d>"] = actions.preview_scrolling_down,
+              ["<PageUp>"] = actions.results_scrolling_up,
+              ["<PageDown>"] = actions.results_scrolling_down,
+              ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+              ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+              ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+              ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+              ["<C-l>"] = actions.complete_tag,
+              ["<C-_>"] = actions.which_key, -- keys from pressing <C-/>
+            },
+            n = {
+              ["<esc>"] = actions.close,
+              ["<CR>"] = actions.select_default,
+              ["<C-x>"] = actions.select_horizontal,
+              ["<C-v>"] = actions.select_vertical,
+              ["<C-t>"] = actions.select_tab,
+              ["<Tab>"] = actions.toggle_selection + actions.move_selection_worse,
+              ["<S-Tab>"] = actions.toggle_selection + actions.move_selection_better,
+              ["<C-q>"] = actions.send_to_qflist + actions.open_qflist,
+              ["<M-q>"] = actions.send_selected_to_qflist + actions.open_qflist,
+              ["j"] = actions.move_selection_next,
+              ["k"] = actions.move_selection_previous,
+              ["H"] = actions.move_to_top,
+              ["M"] = actions.move_to_middle,
+              ["L"] = actions.move_to_bottom,
+              ["<Down>"] = actions.move_selection_next,
+              ["<Up>"] = actions.move_selection_previous,
+              ["gg"] = actions.move_to_top,
+              ["G"] = actions.move_to_bottom,
+              ["<C-u>"] = actions.preview_scrolling_up,
+              ["<C-d>"] = actions.preview_scrolling_down,
+              ["<PageUp>"] = actions.results_scrolling_up,
+              ["<PageDown>"] = actions.results_scrolling_down,
+              ["?"] = actions.which_key,
+            },
           },
         },
         pickers = {
           find_files = {
-            previewer = false,
-            -- path_display = formattedName,
-            layout_config = {
-              height = 0.4,
-              prompt_position = "top",
-              preview_cutoff = 120,
-            },
-          },
-          git_files = {
-            previewer = false,
-            -- path_display = formattedName,
-            layout_config = {
-              height = 0.4,
-              prompt_position = "top",
-              preview_cutoff = 120,
-            },
-          },
-          buffers = {
-            mappings = {
-              i = {
-                ["<c-d>"] = actions.delete_buffer,
-              },
-              n = {
-                ["<c-d>"] = actions.delete_buffer,
-              },
-            },
-            previewer = false,
-            initial_mode = "normal",
-            -- theme = "dropdown",
-            layout_config = {
-              height = 0.4,
-              width = 0.6,
-              prompt_position = "top",
-              preview_cutoff = 120,
-            },
-          },
-          current_buffer_fuzzy_find = {
-            previewer = true,
-            layout_config = {
-              prompt_position = "top",
-              preview_cutoff = 120,
-            },
+            find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
           },
           live_grep = {
-            only_sort_text = true,
-            previewer = true,
-          },
-          grep_string = {
-            only_sort_text = true,
-            previewer = true,
-          },
-          lsp_references = {
-            show_line = false,
-            previewer = true,
-          },
-          treesitter = {
-            show_line = false,
-            previewer = true,
-          },
-          colorscheme = {
-            enable_preview = true,
+            additional_args = function()
+              return { "--hidden" }
+            end,
           },
         },
         extensions = {
           fzf = {
-            fuzzy = true,                   -- false will only do exact matching
-            override_generic_sorter = true, -- override the generic sorter
-            override_file_sorter = true,    -- override the file sorter
-            case_mode = "smart_case",       -- or "ignore_case" or "respect_case"
+            fuzzy = true,
+            override_generic_sorter = true,
+            override_file_sorter = true,
+            case_mode = "smart_case",
           },
-          ["ui-select"] = {
-            require("telescope.themes").get_dropdown({
-              previewer = false,
-              initial_mode = "normal",
-              sorting_strategy = "ascending",
-              layout_strategy = "horizontal",
-              layout_config = {
-                horizontal = {
-                  width = 0.5,
-                  height = 0.4,
-                  preview_width = 0.6,
-                },
-              },
-            }),
-          },
-          package_info = {
-            -- Optional theme (the extension doesn't set a default theme)
-            -- theme = "ivy",
-          },
-          -- frecency = {
-          --   default_workspace = "CWD",
-          --   show_scores = true,
-          --   show_unindexed = true,
-          --   disable_devicons = false,
-          --   ignore_patterns = {
-          --     "*.git/*",
-          --     "*/tmp/*",
-          --     "*/lua-language-server/*",
-          --   },
-          -- },
         },
       })
-      telescope.load_extension("fzf")
-      telescope.load_extension("ui-select")
-      -- telescope.load_extension("refactoring")
-      -- telescope.load_extension("frecency")
-      -- telescope.load_extension("notify")
-      -- telescope.load_extension("package_info")
+
+      -- Load extensions
+      pcall(telescope.load_extension, "fzf")
+
+      -- Set keymaps
+      local builtin = require("telescope.builtin")
+
+      vim.keymap.set("n", "<leader>ff", builtin.find_files, { desc = "Find files" })
+      vim.keymap.set("n", "<leader>fg", builtin.live_grep, { desc = "Live grep" })
+      vim.keymap.set("n", "<leader>fb", builtin.buffers, { desc = "Find buffers" })
+      vim.keymap.set("n", "<leader>fh", builtin.help_tags, { desc = "Help tags" })
+      vim.keymap.set("n", "<leader>fo", builtin.oldfiles, { desc = "Recent files" })
+      vim.keymap.set("n", "<leader>fc", builtin.grep_string, { desc = "Find string under cursor" })
+
+      -- LSP integration
+      vim.keymap.set("n", "<leader>lr", builtin.lsp_references, { desc = "LSP references" })
+      vim.keymap.set("n", "<leader>ld", builtin.lsp_definitions, { desc = "LSP definitions" })
+      vim.keymap.set("n", "<leader>li", builtin.lsp_implementations, { desc = "LSP implementations" })
+      vim.keymap.set("n", "<leader>lt", builtin.lsp_type_definitions, { desc = "LSP type definitions" })
+      vim.keymap.set("n", "<leader>ls", builtin.lsp_document_symbols, { desc = "Document symbols" })
+      vim.keymap.set("n", "<leader>lw", builtin.lsp_workspace_symbols, { desc = "Workspace symbols" })
+      vim.keymap.set("n", "<leader>lD", builtin.diagnostics, { desc = "Diagnostics" })
+
+      -- Git integration
+      vim.keymap.set("n", "<leader>gc", builtin.git_commits, { desc = "Git commits" })
+      vim.keymap.set("n", "<leader>gb", builtin.git_branches, { desc = "Git branches" })
+      vim.keymap.set("n", "<leader>gs", builtin.git_status, { desc = "Git status" })
     end,
   },
 }
