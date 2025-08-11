@@ -5,3 +5,4 @@ nvim/pack/github/start/copilot.vim/
 yarn/global
 raycast/**/*
 zed/**/*
+gcloud/
