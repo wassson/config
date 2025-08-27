@@ -134,12 +134,35 @@ roots = ["build.zig", "build.zig.zon"]
 auto-format = true
 language-servers = ["zls"]
 
-[language-server.zls]
-command = "zls"
-# config = { 
-#   zig_exe_path = "/Users/austinwasson/.local/share/mise/installs/zig/0.14.1/zig",
-#   enable_snippets = true,
-#   enable_argument_placeholders = true,
-#   enable_build_on_save = true,
-#   build_on_save_step = "check"
-# }
+# [language-server.zls]
+# command = "zls"
+
+# [language-server.zls.config]
+# zig_exe_path = "/Users/austinwasson/.local/share/mise/installs/zig/0.14.1/zig"
+# enable_snippets = true
+# enable_argument_placeholders = true
+# enable_build_on_save = true
+# build_on_save_step = "check"
+# warn_style = true
+# semantic_tokens = "full"
+# enable_autofix = false
+
+[[language]]
+name = "odin"
+scope = "source.odin"
+file-types = ["odin"]
+roots = ["ols.json"]
+auto-format = true
+comment-token = "//"
+indent = { tab-width = 4, unit = "\t" }
+language-servers = ["ols"]
+
+[language-server.ols]
+command = "ols"
+
+[[language]]
+name = "wgsl"
+language-servers = [ "wgsl-analyzer" ]
+
+[language-server.wgsl-analyzer]
+command = "wgsl-analyzer"

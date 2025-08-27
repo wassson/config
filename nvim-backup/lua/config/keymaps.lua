@@ -1,6 +1,7 @@
 local opts = { noremap = true, silent = true }
 -- local map = vim.keymap.set
 
+
 -- Keep cursor centered when scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz", opts)
 vim.keymap.set("n", "<C-u>", "<C-u>zz", opts)
@@ -10,7 +11,8 @@ vim.keymap.set("v", "J", ":m '>+1<CR>gv=gv", opts)
 vim.keymap.set("v", "K", ":m '<-2<CR>gv=gv", opts)
 
 -- Fast saving
--- vim.keymap.set("n", "<leader>w", ":write!<CR>", { silent = true, desc = "Save file" })
+
+vim.keymap.set("n", "<leader>w", ":w<CR>", { desc = "Save file" })
 -- vim.keymap.set("n", "<leader>q", ":q!<CR>", opts)
 
 -- Remap for dealing with visual line wraps
@@ -31,8 +33,8 @@ vim.keymap.set("v", "P", '"_dP')
 vim.keymap.set("n", "YY", "va{Vy", opts)
 
 -- Move line on the screen rather than by line in the file
--- vim.keymap.set("n", "j", "gj", opts)
--- vim.keymap.set("n", "k", "gk", opts)
+vim.keymap.set("n", "j", "gj", opts)
+vim.keymap.set("n", "k", "gk", opts)
 
 -- Exit on jj and jk
 vim.keymap.set("i", "jj", "<ESC>", opts)
@@ -53,8 +55,8 @@ vim.keymap.set("n", "=", ":resize +5<CR>")
 vim.keymap.set("n", "-", ":resize -5<CR>")
 
 -- Map enter to ciw in normal mode
--- vim.keymap.set("n", "<CR>", "ciw", opts)  -- Commented out: This overwrites word on Enter - too disruptive
--- vim.keymap.set("n", "<BS>", "ci", opts)   -- Commented out: This changes text on Backspace - too disruptive
+vim.keymap.set("n", "<CR>", "ciw", opts)
+vim.keymap.set("n", "<BS>", "ci", opts)
 
 vim.keymap.set("n", "n", "nzzv", opts)
 vim.keymap.set("n", "N", "Nzzv", opts)
@@ -66,14 +68,10 @@ vim.keymap.set("n", "g#", "g#zz", opts)
 -- map ; to resume last search
 -- map("n", ";", "<cmd>Telescope resume<cr>", opts)
 
--- search current buffer
--- vim.keymap.set("n", "<C-s>", ":Telescope current_buffer_fuzzy_find<CR>", opts)
+-- These telescope keymaps are now handled in plugins/telescope.lua
 
 -- Split line with X
 vim.keymap.set("n", "X", ":keeppatterns substitute/\\s*\\%#\\s*/\\r/e <bar> normal! ==^<cr>", { silent = true })
-
--- ctrl + x to cut full line
-vim.keymap.set("n", "<C-x>", "dd", opts)
 
 -- Select all
 vim.keymap.set("n", "<C-a>", "ggVG", opts)
@@ -89,7 +87,7 @@ vim.keymap.set("n", "<C-n>", ":w %:h/", opts)
 
 vim.keymap.set("n", "<C-P>", ':lua require("config.utils").toggle_go_test()<CR>', opts)
 
--- Get highlighted line numbers in visual mode
-vim.keymap.set("v", "<leader>ln", ':lua require("config.utils").get_highlighted_line_numbers()<CR>', opts)
-
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", opts)
+
+-- ctrl + x to cut full line
+vim.keymap.set("n", "<C-x>", "dd", opts)

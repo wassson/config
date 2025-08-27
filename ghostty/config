@@ -1,16 +1,15 @@
-#shell-integration = fish
 # command = /usr/local/bin/fish --login --interactive
 
 # themes
-# theme = GruvboxDarkHard
-background = 1C2021
+theme = GruvboxDarkHard
+#background = 1C2021
 
 # terafox
 #theme = terafox
 #background = 0F1C1E
 
 # rose-pine
-theme = rose-pine
+#theme = rose-pine
 # background = 232137
 # theme = rose-pine-moon
 # background = 232138
@@ -19,15 +18,17 @@ theme = rose-pine
 #theme = catppuccin-mocha
 #theme = GitHub-Dark-Colorblind
 
+#theme = GitHub Dark
+
 # window
 adjust-cell-height = 16%
-adjust-cell-width = 4%
+adjust-cell-width = 3%
 # background-opacity = 0.99
-font-family = JetBrainsMono NFM Bold
-#font-family = "Zed Mono Regular"
+#font-family = JetBrainsMono NFM Bold
+font-family = "Zed Mono Regular"
 font-size = 13
 font-thicken = true
-#font-thicken-strength = 95
+font-thicken-strength = 20
 
 gtk-tabs-location = bottom
 
@@ -45,6 +46,7 @@ mouse-hide-while-typing = true
 # cursor
 cursor-style = bar
 
+quick-terminal-position = bottom
 shell-integration = zsh
 window-colorspace = "display-p3"
 # window-decoration = false
@@ -54,4 +56,4 @@ window-save-state = always
 # keybinds
 keybind = super+shift+o=next_tab
 keybind = super+shift+u=previous_tab
-
+keybind = global:cmd+grave_accent=toggle_quick_terminal

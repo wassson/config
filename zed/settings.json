@@ -55,7 +55,7 @@
     "quick_actions": false
   },
   "vim_mode": true,
-  "theme": "Wasson RP",
+  "theme": "Duskfox",
   "ui_font_size": 14,
   "ui_font_family": "JetBrainsMono Nerd Font",
   "buffer_font_family": "JetBrainsMono Nerd Font",
@@ -65,8 +65,8 @@
   "agent": {
     "always_allow_tool_actions": true,
     "default_model": {
-      "provider": "zed.dev",
-      "model": "claude-sonnet-4"
+      "provider": "anthropic",
+      "model": "claude-sonnet-4-latest"
     },
     "button": true
   },

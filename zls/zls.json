@@ -3,5 +3,12 @@
   "enable_snippets": true,
   "enable_argument_placeholders": true,
   "enable_build_on_save": true,
-  "build_on_save_step": "check"
+  "build_on_save_step": "check",
+  "warn_style": true,
+  "semantic_tokens": "full",
+  "enable_autofix": false,
+  "skip_std_references": false,
+  "builtin_path": "",
+  "zig_lib_path": "",
+  "dangerous_comptime_experiments_do_not_enable": false
 }

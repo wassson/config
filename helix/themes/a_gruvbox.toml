@@ -4,6 +4,6 @@ green = "#89B482"
 # string = { fg = "#89B482" }
 function = { fg = "#89B482" }
 
-"ui.background" = {}
-"ui.bufferline.background" = {}
-"ui.statusline" = { bg = "" }
+# "ui.background" = {}
+# "ui.bufferline.background" = {}
+# "ui.statusline" = { bg = "" }
