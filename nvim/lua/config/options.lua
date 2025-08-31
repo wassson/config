@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 vim.g.mapleader = " "                                   -- change leader to a space
 vim.g.maplocalleader = " "                              -- change localleader to a space
 
@@ -67,3 +68,9 @@ vim.filetype.add({
         ["%.env%.[%w_.-]+"] = "dotenv",
     },
 })
+=======
+-- Options are automatically loaded before lazy.nvim startup
+-- Default options that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/options.lua
+-- Add any additional options here
+vim.opt.relativenumber = false
+>>>>>>> f11d1db (omarchy)

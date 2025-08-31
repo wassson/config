@@ -1,4 +1,11 @@
+# OS-specific files
 .DS_Store
+Thumbs.db
+*.swp
+*~
+.directory
+
+# Application configs to ignore
 configstore
 github-copilot/hosts.json
 nvim/pack/github/start/copilot.vim/
@@ -7,3 +14,42 @@ raycast/extensions/
 zed/**/*
 gcloud/
 fonts/Iosevka*/
+
+# Linux-specific
+pulse/
+gtk-2.0/gtkfilechooser.ini
+gtk-3.0/bookmarks
+user-dirs.dirs
+user-dirs.locale
+mimeapps.list
+dconf/
+*.log
+BraveSoftware/
+google-chrome/
+chromium/
+Code/
+code-oss/
+discord/
+slack/
+spotify/
+obsidian/
+
+# System/session files
+systemd/user/*.target.wants
+KDE/
+plasma*
+kde*
+session/
+autostart/
+
+# Cache and temp files
+*cache*/
+*.cache
+.recently-used
+
+# Secrets and sensitive data
+*.pem
+*.key
+*.crt
+*.secret
+gh/hosts.yml

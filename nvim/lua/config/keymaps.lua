@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 local opts = { noremap = true, silent = true }
 -- local map = vim.keymap.set
 
@@ -93,3 +94,8 @@ vim.keymap.set("n", "<C-P>", ':lua require("config.utils").toggle_go_test()<CR>'
 vim.keymap.set("v", "<leader>ln", ':lua require("config.utils").get_highlighted_line_numbers()<CR>', opts)
 
 vim.keymap.set("n", "<Esc>", ":nohlsearch<CR>", opts)
+=======
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+>>>>>>> f11d1db (omarchy)
